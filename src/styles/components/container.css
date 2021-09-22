@@ -1,0 +1,12 @@
+/* ==========================================================================
+   #CONTAINER COMPONENT
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}

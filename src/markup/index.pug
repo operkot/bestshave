@@ -1,0 +1,16 @@
+extends layout/default
+
+block vars
+  -
+    locals.page = {
+      language: 'ru',
+      name: 'home',
+      title: 'Page title',
+      description: 'Page description'
+    }
+
+
+block main
+  main.flex-grow
+    .container
+      p Main content
