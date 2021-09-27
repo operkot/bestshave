@@ -21,6 +21,13 @@
 /* ##COMPONENTS
    ========================================================================== */
 @import 'components/container.css';
+@import 'components/button.css';
+@import 'components/header.css';
+@import 'components/logo.css';
+@import 'components/menu.css';
+@import 'components/tools.css';
+@import 'components/search.css';
+
 /* ##STATE
    ========================================================================== */
 @import 'state/default.css';

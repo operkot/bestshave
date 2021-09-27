@@ -1,0 +1,102 @@
+/* ==========================================================================
+   #HEADER
+   ========================================================================== */
+
+/**
+ * CONTENTS:
+ * 
+ * ##HEADER BASE
+ * ##HEADER CONTENT
+ * ##HEADER LOGO
+ * ##HEADER MENU
+ * ##HEADER TOOLS
+ * 
+ */
+
+/* ##HEADER BASE
+   ========================================================================== */
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+
+  @apply bg-base-0 text-base-40;
+}
+
+@media (width < theme('screens.md')) {
+  .header {
+    min-height: 72px;
+  }
+}
+
+@media (width >= theme('screens.md')) {
+  .header {
+    min-height: 100px;
+  }
+}
+
+/* ##HEADER CONTENT
+   ========================================================================== */
+.header-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ##HEADER LOGO
+   ========================================================================== */
+.header-logo {
+}
+
+/* ##HEADER MENU
+   ========================================================================== */
+.header-menu {
+  font-size: 0.875rem;
+}
+
+@media (width <= theme('screens.lg')) {
+  .header-menu {
+    order: 1;
+  }
+}
+
+@media (width > theme('screens.lg')) {
+  .header-menu {
+    margin-left: auto;
+  }
+
+  .header-menu:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+}
+
+/* ##HEADER TOOLS
+   ========================================================================== */
+@media (width >= theme('screens.md')) and (width <= theme('screens.lg')) {
+  .header-tools {
+    margin-left: auto;
+  }
+
+  .header-tools {
+    margin-right: 1.5rem;
+  }
+}
+
+@media (width < theme('screens.md')) {
+  .header-tools {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    padding: 1rem;
+
+    @apply bg-base-0;
+  }
+}

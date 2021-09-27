@@ -1,3 +1,37 @@
-header.header.py-8.bg-base-0.text-base-30
-  .container
-    p Header
+include ../mixin/icon
+include ../mixin/search
+
+header.header
+  .header-content.container
+    //- =============================================================================
+    //- ##HEADER LOGO
+    //- =============================================================================
+    a.header-logo.logo(href="/") Bestshave.ru
+
+    //- =============================================================================
+    //- ##HEAEDR MENU
+    //- =============================================================================
+    nav.header-menu.menu(x-data="menu" @click.outside="close")
+      button.menu-trigger.menu-control(@click="toggle") 
+        +icon({name: 'bars', size: { w: 24, h: 24 }})
+      ul.menu-list(:class="isOpen && 'is-open'")
+        li.menu-close
+          button.menu-control.ml-auto(type="button" @click="close")
+            +icon({ name: 'times', size: { w: 24, h:24 } })
+        li.menu-item
+          a.menu-link(href="#") Каталог
+        li.menu-item
+          a.menu-link(href="#") О нас
+        li.menu-item
+          a.menu-link(href="#") Доставка и оплата
+    
+    //- =============================================================================
+    //- ##HEADER TOOLS
+    //- =============================================================================
+    .header-tools.tools
+      +search
+      a.tools-button(href="#")
+        +icon({ name: 'user', size: { w: 24, h: 24 }, classnames: 'tools-icon' })
+      a.tools-button.has-badge(href="#")
+        +icon({ name: 'cart', size: { w: 24, h: 24 }, classnames: 'tools-icon' })
+        .tools-badge 8

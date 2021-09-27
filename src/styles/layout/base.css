@@ -1,3 +1,16 @@
 /* ==========================================================================
    #BASE LAYOUT
    ========================================================================== */
+
+@media (width < theme('screens.md')) {
+  .layout-base {
+    padding-top: 72px;
+    padding-bottom: 56px;
+  }
+}
+
+@media (width >= theme('screens.md')) {
+  .layout-base {
+    padding-top: 100px;
+  }
+}

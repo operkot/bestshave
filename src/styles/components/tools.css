@@ -1,0 +1,65 @@
+/* ==========================================================================
+   #TOOLS
+   ========================================================================== */
+
+/**
+ * User tools component (search, cart link, dashboard link, etc)
+ */
+
+/**
+  * CONTENTS:
+  * 
+  * ##TOOLS BASE 
+  * ##TOOLS BUTTON 
+  * ##TOOLS BADGE 
+  * 
+  */
+
+/* ##TOOLS BASE
+   ========================================================================== */
+.tools {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min-content;
+  column-gap: 1.5rem;
+}
+
+@media (width <= theme('screens.md')) {
+  .tools {
+    justify-content: space-between;
+  }
+}
+
+/* ##TOOLS BUTTON
+   ========================================================================== */
+.tools-button {
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.tools-button:hover {
+  @apply text-primary-0;
+}
+
+.tools-button.has-badge {
+  position: relative;
+  padding-right: 12px;
+}
+
+/* ##TOOLS BADGE
+   ========================================================================== */
+.tools-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
+  min-width: 20px;
+  height: 20px;
+  font-size: 10px;
+
+  @apply rounded-full bg-primary-0 text-base-40;
+}

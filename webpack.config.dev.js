@@ -9,7 +9,7 @@ module.exports = merge(baseConfig, {
   mode: 'development',
   target: 'web',
   devServer: {
-    // host: '0.0.0.0',
+    host: '0.0.0.0',
     port: 7777,
     disableHostCheck: true,
     overlay: true,

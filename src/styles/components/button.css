@@ -1,0 +1,126 @@
+/* ==========================================================================
+   #BUTTON
+   ========================================================================== */
+
+/**
+ * CONTENTS:
+ * 
+ * ##BUTTON BASE
+ * ##BUTTON PRIMARY
+ * ##BUTTON SECONDARY
+ * 
+ */
+
+/* ##BUTTON BASE
+   ========================================================================== */
+.btn,
+.added_to_cart {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 132px;
+  padding: 0.5rem 1.25rem;
+
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  user-select: none;
+
+  transition: background-color 0.3s ease-out, border-color 0.3s ease-out,
+    color 0.3s ease-out, opacity 0.3s ease-out;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  @apply font-primary text-base-40;
+}
+
+.btn:focus,
+.added_to_cart:focus {
+  outline: none;
+}
+
+.btn[disabled],
+.added_to_cart[disabled] {
+  background-color: #e4e4e4;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: not-allowed;
+}
+
+.added_to_cart {
+  @apply w-full px-6 py-4;
+}
+
+/* ##BUTTON PRIMARY
+   ========================================================================== */
+.btn--primary {
+  position: relative;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
+  @apply bg-primary-0;
+}
+.btn--primary:before {
+  content: '';
+
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  transform: scale(0);
+  transition: transform 0.3s ease;
+
+  @apply bg-primary-10;
+}
+
+.btn--primary:hover:not([disabled]):before,
+.btn--primary:focus:not([disabled]):before,
+.btn--primary:active:not([disabled]):before {
+  transform: scale(1);
+}
+
+/* ##BUTTON SECONDARY
+   ========================================================================== */
+.btn--secondary,
+.added_to_cart {
+  position: relative;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
+  @apply bg-base-10;
+}
+.btn--secondary:before,
+.added_to_cart:before {
+  content: '';
+
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  transform: scale(0);
+  transition: transform 0.3s ease;
+
+  @apply bg-primary-0;
+}
+
+.added_to_cart:hover:not([disabled]):before,
+.added_to_cart:focus:not([disabled]):before,
+.added_to_cart:active:not([disabled]):before,
+.btn--secondary:hover:not([disabled]):before,
+.btn--secondary:focus:not([disabled]):before,
+.btn--secondary:active:not([disabled]):before {
+  transform: scale(1);
+}

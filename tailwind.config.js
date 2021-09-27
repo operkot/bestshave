@@ -20,8 +20,9 @@ module.exports = {
     colors: {
       'base-0': '#000',
       'base-10': '#2e3538',
-      'base-20': '#fbfbfb', // base-15
-      'base-30': '#fff', // base-20
+      'base-20': '#aeaeae',
+      'base-30': '#fbfbfb', // base-15
+      'base-40': '#fff', // base-20
       'primary-0': '#e74c3c',
       'primary-10': '#c0392b',
       success: '#27ae60',
