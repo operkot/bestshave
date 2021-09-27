@@ -12,5 +12,27 @@ block vars
 
 block main
   main.flex-grow
-    .container
-      p Main content
+    
+    //- =============================================================================
+    //- ##HERO SECTION
+    //- =============================================================================
+    section.hero.wrapper
+      .hero-showcase.swiper-container
+        .swiper-wrapper
+          .swiper-slide
+            img.hero-media(src="img/uploads/gallery-9.png" alt="")
+          .swiper-slide
+            img.hero-media(src="img/uploads/gallery-10.png" alt="")
+          .swiper-slide
+            img.hero-media(src="img/uploads/gallery-4.png" alt="")
+          .swiper-slide
+            img.hero-media(src="img/uploads/gallery-1.png" alt="")
+          .swiper-slide
+            img.hero-media(src="img/uploads/gallery-5.png" alt="")
+          .swiper-slide
+            img.hero-media(src="img/uploads/gallery-6.png" alt="")
+      
+      .hero-content
+        h1.hero-title.heading-callout Только #[em качественные] товары для #[em мужчин]
+        a.btn.btn--primary.w-full.px-14.py-4(href="#" class="xs:w-auto") Каталог
+

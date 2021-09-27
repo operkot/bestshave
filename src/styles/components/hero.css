@@ -1,0 +1,147 @@
+/* ==========================================================================
+   #HERO
+   ========================================================================== */
+
+/**
+ * CONTENTS:
+ * 
+ * ##HERO BASE
+ * ##HERO SHOWCASE
+ * ##HERO MEDIA
+ * ##HERO CONTENT
+ * ##HERO TITLE
+ * 
+ */
+
+/* ##HERO BASE
+   ========================================================================== */
+/* prettier-ignore */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../img/bg-wood-grain.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @apply bg-base-0 text-base-20;
+}
+
+@media (width >= theme('screens.lg')) {
+  .hero {
+    display: flex;
+    align-items: center;
+    min-height: 640px;
+  }
+}
+
+@media (width >= theme('screens.xl')) {
+  .hero {
+    min-height: 700px;
+  }
+}
+
+/* ##HERO SHOWCASE
+   ========================================================================== */
+@media (width >= theme('screens.lg')) {
+  .hero-showcase {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    max-width: 960px;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (width < theme('screens.lg')) {
+  .hero-showcase {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+}
+
+@media (width < theme('screens.md')) {
+  .hero-showcase {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+
+/* ##HERO MEDIA
+   ========================================================================== */
+.hero-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ##HERO CONTENT
+   ========================================================================== */
+@media (width < theme('screens.xs')) {
+  .hero-content {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media (width >= theme('screens.xs')) {
+  .hero-content {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
+
+@media (width < theme('screens.lg')) {
+  .hero-content {
+    text-align: center;
+  }
+}
+
+@media (width >= theme('screens.lg')) {
+  .hero-content {
+    width: 50%;
+    padding-right: 2rem;
+    text-align: left;
+  }
+}
+
+/* ##HERO TITLE
+   ========================================================================== */
+.hero-title {
+  line-height: 120%;
+  font-weight: 700;
+}
+
+.hero-title:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+@media (width < theme('screens.md')) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (width >= theme('screens.md')) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (width >= theme('screens.lg')) {
+  .hero-title {
+    max-width: 580px;
+  }
+}
+
+.hero-title em {
+  font-style: normal;
+
+  @apply text-primary-0;
+}

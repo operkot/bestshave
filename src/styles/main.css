@@ -7,6 +7,7 @@
 /* purgecss start ignore */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
+@import '../../node_modules/swiper/swiper-bundle.css';
 /* purgecss end ignore */
 
 /* ##BASE
@@ -32,6 +33,8 @@
 @import 'components/footer.css';
 @import 'components/link.css';
 @import 'components/socials.css';
+
+@import 'components/hero.css';
 
 /* ##STATE
    ========================================================================== */
