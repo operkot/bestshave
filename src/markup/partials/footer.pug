@@ -1,3 +1,37 @@
-footer.footer.py-8.bg-base-0.text-base-40(role="contentinfo")
-  .container
-    p Footer
+include ../mixin/icon
+
+footer.footer.wrapper(role="contentinfo")
+  .footer-main
+    a.footer-logo.logo(href="/") Bestshave.ru
+      
+    section.footer-contacts
+      h2.mb-3.text-xl.font-bold Контакты
+      ul
+        li: a.link(href="tel:+79613036000") +7 (961) 303-60-00
+        li: a.link(href="mailto:info@bestshave.ru") info@bestshave.ru
+
+  ul.footer-menu
+    li
+      a.link(href="#") Каталог
+    li
+      a.link(href="#") О нас
+    li
+      a.link(href="#") Доставка и оплата
+
+  .footer-socials
+    ul.socials
+        li
+          a.link(href="#")
+            +icon({ name: 'vk', size: { w: 24, h: 24 }, classnames: 'fill-current' })
+        li
+          a.link(href="#")
+            +icon({ name: 'instagram', size: { w: 24, h: 24 }, classnames: 'fill-current' })
+        li
+          a.link(href="#")
+            +icon({ name: 'facebook', size: { w: 24, h: 24 }, classnames: 'fill-current' })
+        li
+          a.link(href="#")
+            +icon({ name: 'twitter', size: { w: 24, h: 24 }, classnames: 'fill-current' })
+
+
+  p.footer-copy ©2021 bestshave.ru

@@ -21,12 +21,17 @@
 /* ##COMPONENTS
    ========================================================================== */
 @import 'components/container.css';
+
 @import 'components/button.css';
 @import 'components/header.css';
 @import 'components/logo.css';
 @import 'components/menu.css';
 @import 'components/tools.css';
 @import 'components/search.css';
+
+@import 'components/footer.css';
+@import 'components/link.css';
+@import 'components/socials.css';
 
 /* ##STATE
    ========================================================================== */

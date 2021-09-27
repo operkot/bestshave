@@ -1,0 +1,87 @@
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+
+/* ##FOOTER BASE
+   ========================================================================== */
+/* prettier-ignore */
+.footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../img/bg-wood-black.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @apply bg-base-0 text-base-40;
+}
+
+/* ##FOOTER MAIN
+   ========================================================================== */
+@media (width > theme('screens.sm')) {
+  .footer-main {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer-main:not(:last-child) {
+  margin-bottom: 3.5rem;
+}
+
+/* ##FOOTER LOGO
+   ========================================================================== */
+@media (width <= theme('screens.sm')) {
+  .footer-logo {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ##FOOTER CONTACTS
+   ========================================================================== */
+.footer-contacts {
+  font-size: 0.875rem;
+}
+
+.footer-contacts li:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
+/* ##FOOTER MENU
+   ========================================================================== */
+.footer-menu:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  font-size: 0.875rem;
+  line-height: 1.2;
+}
+
+.footer-menu li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+/* ##FOOTER SOCIALS
+   ========================================================================== */
+.footer-socials:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+/* ##FOOTER COPY
+   ========================================================================== */
+.footer-copy {
+  font-size: 0.875rem;
+  line-height: 1.2;
+  text-align: center;
+}

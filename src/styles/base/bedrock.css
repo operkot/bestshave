@@ -16,3 +16,13 @@ body {
 
   @apply font-primary text-base-0 bg-base-40;
 }
+
+/* purgecss start ignore  */
+[x-cloak] {
+  display: none !important;
+}
+
+.blockUI.blockOverlay {
+  z-index: 9 !important;
+}
+/* purgecss end ignore  */
