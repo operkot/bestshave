@@ -1,0 +1,28 @@
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+
+/* ##HEADING SECTION
+   ========================================================================== */
+.heading-section {
+  font-weight: 700;
+  line-height: 1;
+}
+
+@media (width < theme('screens.xs')) {
+  .heading-section {
+    font-size: 1.25rem;
+  }
+}
+
+@media (width >= theme('screens.xs')) and (width < theme('screens.md')) {
+  .heading-section {
+    font-size: 1.75rem;
+  }
+}
+
+@media (width >= theme('screens.md')) {
+  .heading-section {
+    font-size: 2.25rem;
+  }
+}

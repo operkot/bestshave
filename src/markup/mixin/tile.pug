@@ -1,0 +1,8 @@
+mixin tile({ title, image, href } = {})
+  -
+    const tag = href ? 'a' : 'article'
+
+  #{tag}.tile(href=href)
+    .tile-media
+      img.tile-img(src=image alt="")
+    p.tile-caption #{title}

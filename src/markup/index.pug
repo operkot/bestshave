@@ -1,5 +1,7 @@
 extends layout/default
 
+include mixin/tile
+
 block vars
   -
     locals.page = {
@@ -55,3 +57,26 @@ block main
     section.gallery
       img(src="img/uploads/gallery-7.png" alt="")
       img(src="img/uploads/gallery-2.png" alt="")
+
+    //- =============================================================================
+    //- ##CATEGORIES SECTION
+    //- =============================================================================
+    -
+      const categories = [
+        { title: 'Т-образные станки', image: 'img/uploads/razors.png' },
+        { title: 'Бритвенные наборы', image: 'img/uploads/gift-sets.jpg' },
+        { title: 'Лезвия', image: 'img/uploads/de-blades.png' },
+        { title: 'Косметика до бритья', image: 'img/uploads/preshave.png' },
+        { title: 'Косметика для бритья', image: 'img/uploads/shave-cosmetic.png' },
+        { title: 'Косметика после бритья', image: 'img/uploads/aftershave.png' },
+        { title: 'Помазки', image: 'img/uploads/shaving-brushes.png' },
+        { title: 'Аксессуары для бритья', image: 'img/uploads/accessories.png' },
+      ]
+
+    section.categories.wrapper
+      h2.categories-title.heading-section Наши товары
+
+      ul.categories-list
+        each category in categories
+          li
+            +tile({ title: category.title, image: category.image, href: '#' })

@@ -1,0 +1,68 @@
+/* ==========================================================================
+   #CATEGORIES
+   ========================================================================== */
+
+/**
+ * Homepage categories section
+ * 
+ * CONTENTS:
+ * 
+ * ##CATEGORIES BASE
+ * ##CATEGORIES TITLE
+ * ##CATEGORIES LIST
+ * 
+ */
+
+/* ##CATEGORIES BASE
+   ========================================================================== */
+@media (width < theme('screens.lg')) {
+  .categories {
+    padding-top: 5rem;
+    padding-bottom: 6.25rem;
+  }
+}
+
+@media (width >= theme('screens.lg')) {
+  .categories {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* ##CATEGORIES TITLE
+   ========================================================================== */
+.categories-title {
+  text-align: center;
+}
+
+@media (width < theme('screens.lg')) {
+  .categories-title:not(:last-child) {
+    margin-bottom: 3.25rem;
+  }
+}
+
+@media (width >= theme('screens.lg')) {
+  .categories-title:not(:last-child) {
+    margin-bottom: 4.5rem;
+  }
+}
+
+/* ##CATEGORIES LIST
+   ========================================================================== */
+.categories-list {
+  display: grid;
+  grid-gap: 1.5rem;
+  justify-content: center;
+}
+
+@media (width >= theme('screens.md')) and (width < theme('screens.lg')) {
+  .categories-list {
+    grid-template-columns: repeat(2, minmax(0, 320px));
+  }
+}
+
+@media (width >= theme('screens.lg')) {
+  .categories-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
