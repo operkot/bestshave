@@ -36,16 +36,14 @@
 @import 'components/menu.css';
 @import 'components/tools.css';
 @import 'components/search.css';
-
 @import 'components/footer.css';
 @import 'components/socials.css';
 
 @import 'components/hero.css';
-
 @import 'components/promo.css';
-
 @import 'components/categories.css';
 @import 'components/featured.css';
+@import 'components/brands.css';
 
 /* ##STATE
    ========================================================================== */

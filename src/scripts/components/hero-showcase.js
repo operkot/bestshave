@@ -5,7 +5,11 @@ Swiper.use([Autoplay, EffectFade])
 const HERO_SHOWCASE_SEL = '.hero-showcase'
 
 export default () => {
-  new Swiper(HERO_SHOWCASE_SEL, {
+  const slider = document.querySelector(HERO_SHOWCASE_SEL)
+
+  if (!slider) return
+
+  new Swiper(slider, {
     loop: true,
     effect: 'fade',
     allowTouchMove: false,

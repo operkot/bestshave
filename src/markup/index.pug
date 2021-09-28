@@ -24,7 +24,7 @@ block main
         h1.hero-title.heading-callout Только #[em качественные] товары для #[em мужчин]
         a.btn.btn--primary.w-full.px-14.py-4(href="#" class="xs:w-auto") Каталог
       
-      .hero-showcase.media-figure.swiper-container
+      .hero-showcase.media-figure.swiper
         .swiper-wrapper
           .swiper-slide
             img.hero-media(src="img/uploads/gallery-9.png" alt="")
@@ -117,3 +117,31 @@ block main
       ul.featured-list
         each product in featured
           +card({ ...product, tag: 'li' })
+    
+    //- =============================================================================
+    //- ##BRANDS SECTION
+    //- =============================================================================
+    -
+      const brands = [
+        'muhle',
+        'floid',
+        'truefitt-and-hill-logo',
+        'proraso',
+        'merkur',
+        'taylor-of-old-bond-street',
+        'razorock',
+        'tabac-original',
+        'fatip',
+        'cella-milano',
+        'martin-de-candre',
+        'omega',
+        'osma',
+        'lea'
+      ]
+
+    section.brands
+      .brands-slider.swiper
+        .swiper-wrapper
+          each brand in brands
+            .brands-slide.swiper-slide
+              img.brands-logo(src=`img/uploads/${brand}.png` width="132" height="132" alt="")
