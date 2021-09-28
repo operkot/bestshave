@@ -1,0 +1,72 @@
+/* ==========================================================================
+   #FEATURED
+   ========================================================================== */
+
+/**
+ * Featured section, also used like "Related" product section
+ * 
+ * CONTENTS:
+ * 
+ * ##FEATIRED BASE
+ * ##FEATURED TITLE
+ * ##FEATURED LIST
+ * 
+ */
+
+/* ##FEATIRED BASE
+   ========================================================================== */
+.featured {
+  background-image: url(../img/bg-wood-grey.jpg);
+}
+
+@media (width < theme('screens.lg')) {
+  .featured {
+    padding-top: 5rem;
+    padding-bottom: 6.25rem;
+  }
+}
+
+@media (width >= theme('screens.lg')) {
+  .featured {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* ##FEATURED TITLE
+   ========================================================================== */
+.featured-title {
+  text-align: center;
+}
+
+@media (width < theme('screens.lg')) {
+  .featured-title:not(:last-child) {
+    margin-bottom: 3.25rem;
+  }
+}
+
+@media (width >= theme('screens.lg')) {
+  .featured-title:not(:last-child) {
+    margin-bottom: 4.5rem;
+  }
+}
+
+/* ##FEATURED LIST
+   ========================================================================== */
+.featured-list {
+  display: grid;
+  grid-gap: 1.5rem;
+  justify-content: center;
+}
+
+@media (width >= theme('screens.md')) and (width < theme('screens.lg')) {
+  .featured-list {
+    grid-template-columns: repeat(2, minmax(0, 320px));
+  }
+}
+
+@media (width >= theme('screens.lg')) {
+  .featured-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

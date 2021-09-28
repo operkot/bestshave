@@ -31,7 +31,8 @@ html(lang=locals.page.language)
     link(rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png")
     link(rel="manifest" href="favicon/manifest.json")
 
-  body.layout-base
+  body.site
     include ../partials/header
-    block main
+    #content.site-content
+      block main
     include ../partials/footer

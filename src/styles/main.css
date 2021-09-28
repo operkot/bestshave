@@ -17,7 +17,7 @@
 
 /* ##LAYOUT
    ========================================================================== */
-@import 'layout/base.css';
+@import 'layout/site.css';
 
 /* ##COMPONENTS
    ========================================================================== */
@@ -28,6 +28,8 @@
 
 @import 'components/media.css';
 @import 'components/gallery.css';
+@import 'components/tile.css';
+@import 'components/card.css';
 
 @import 'components/header.css';
 @import 'components/logo.css';
@@ -43,7 +45,7 @@
 @import 'components/promo.css';
 
 @import 'components/categories.css';
-@import 'components/tile.css';
+@import 'components/featured.css';
 
 /* ##STATE
    ========================================================================== */

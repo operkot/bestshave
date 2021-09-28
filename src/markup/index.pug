@@ -1,6 +1,7 @@
 extends layout/default
 
 include mixin/tile
+include mixin/card
 
 block vars
   -
@@ -13,7 +14,7 @@ block vars
 
 
 block main
-  main.flex-grow
+  main#main.site-main
     
     //- =============================================================================
     //- ##HERO SECTION
@@ -47,7 +48,8 @@ block main
         .promo-content
           p В магазине bestshsave.ru представлен широкий ассортимент аксессуаров и косметики для бритья, чтобы удовлетворить самые искушенные запросы наших покупателей. 
           p А для особых бритвенных эстетов есть возможность офрмить персональный заказ!
-        a.btn.btn--primary.w-full.px-14.py-4(href="#" class="xs:w-auto") Подробнее
+        .promo-footer
+          a.btn.btn--primary.w-full.px-14.py-4(href="#" class="xs:w-auto") Подробнее
       .promo-figure.media-figure
         img.promo-img(src="img/uploads/gallery-8.png" alt="")
 
@@ -80,3 +82,38 @@ block main
         each category in categories
           li
             +tile({ title: category.title, image: category.image, href: '#' })
+    
+    //- =============================================================================
+    //- ##FEATURED PRODUCTS SECTION
+    //- =============================================================================
+    -
+      const featured = [
+        {
+          image: 'img/uploads/muhle-r94-rocca.png',
+          title: 'Станок для бритья Muhle R 94 Rocca',
+          price: '4 500',
+          salePrice: '6 500'
+        },
+        {
+          image: 'img/uploads/muhle-r95-rocca.png',
+          title: 'Станок для бритья Muhle R 95 Rocca',
+          price: '6 900',
+        },
+        {
+          image: 'img/uploads/muhle-r-41-traditional.png',
+          title: 'Станок для бритья Muhle R41',
+          price: '2 600',
+        },
+        {
+          image: 'img/uploads/muhle-r89-traditional.png',
+          title: 'Станок для бритья Muhle R89',
+          price: '2 600',
+          isOutOfStock: true
+        }
+      ]
+
+    section.featured.wrapper
+      h2.featured-title.heading-section Рекомендуемые товары
+      ul.featured-list
+        each product in featured
+          +card({ ...product, tag: 'li' })

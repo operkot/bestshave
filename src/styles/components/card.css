@@ -1,0 +1,163 @@
+/* ==========================================================================
+   ##CARD
+   ========================================================================== */
+
+/**
+ * CONTENTS:
+ * 
+ * ##CARD BASE
+ * ##CARD BODY
+ * ##CARD LINK
+ * ##CARD MEDIA
+ * ##CARD SALE
+ * ##CARD IMG
+ * ##CARD TITLE
+ * ##CARD PRICE
+ * ##CARD FOOTER
+ * ##CARD DISABLED
+ * 
+ */
+
+/* ##CARD BASE
+   ========================================================================== */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+
+  @apply bg-base-40;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgb(90 90 90 / 50%);
+}
+
+/* ##CARD BODY
+   ========================================================================== */
+.card-body {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* ##CARD LINK
+   ========================================================================== */
+.card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+/* ##CARD MEDIA
+   ========================================================================== */
+.card-media {
+  position: relative;
+}
+
+.card-media:before {
+  content: '';
+
+  display: block;
+  padding-top: 100%;
+}
+
+.card-media:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* ##CARD SALE
+   ========================================================================== */
+.card-sale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  @apply bg-primary-0 text-base-40;
+}
+
+/* ##CARD IMG
+   ========================================================================== */
+.card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ##CARD TITLE
+   ========================================================================== */
+.card-title {
+  text-align: center;
+}
+
+.card-title:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+/* ##CARD RATING
+   ========================================================================== */
+.card-rating {
+  display: flex;
+  justify-content: center;
+}
+
+/* ##CARD PRICE
+   ========================================================================== */
+.card-price {
+  text-align: center;
+  font-weight: 700;
+  margin-top: auto;
+}
+
+.card-price del {
+  margin-right: 0.5rem;
+
+  @apply text-base-10;
+}
+
+.card-price ins {
+  text-decoration: none;
+
+  @apply text-primary-0;
+}
+
+.card-price:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* ##CARD FOOTER
+   ========================================================================== */
+.card-footer {
+  padding: 0 1rem 1rem;
+}
+
+/* ##CARD ADDED
+   ========================================================================== */
+.card .add_to_cart_button:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+/* ##CARD DISABLED
+   ========================================================================== */
+.card--disabled .card-media {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+.card--disabled .card-price {
+  @apply text-base-10;
+}

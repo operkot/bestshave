@@ -44,17 +44,17 @@
 
 /* ##MEDIA FIGURE
    ========================================================================== */
-@media (width < theme('screens.lg')) {
-  .media-figure {
-    margin-left: -2rem;
-    margin-right: -2rem;
-  }
-}
-
-@media (width <= theme('screens.md')) {
+@media (width < theme('screens.md')) {
   .media-figure {
     margin-left: -1rem;
     margin-right: -1rem;
+  }
+}
+
+@media (width >= theme('screens.md')) and (width < theme('screens.lg')) {
+  .media-figure {
+    margin-left: -2rem;
+    margin-right: -2rem;
   }
 }
 

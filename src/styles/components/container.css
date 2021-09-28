@@ -23,19 +23,21 @@
   }
 }
 
-.wrapper {
-  padding-right: 1rem;
-  padding-left: 1rem;
+@media (width < theme('screens.md')) {
+  .wrapper {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
 }
 
-@screen md {
+@media (width >= theme('screens.md')) {
   .wrapper {
     padding-right: 2rem;
     padding-left: 2rem;
   }
 }
 
-@screen xxl {
+@media (width >= theme('screens.xxl')) {
   .wrapper {
     padding-right: calc(50vw - 668px);
     padding-left: calc(50vw - 668px);

@@ -11,6 +11,7 @@
  * ##PROMO BODY
  * ##PROMO CONTENT
  * ##PROMO TITLE
+ * ##PROMO FOOTER
  * ##PROMO IMG
  * 
  */
@@ -82,6 +83,14 @@
 
 @media (width >= theme('screens.lg')) {
   .promo-title {
+  }
+}
+
+/* ##PROMO FOOTER
+   ========================================================================== */
+@media (width < theme('screens.md')) {
+  .promo-footer {
+    text-align: center;
   }
 }
 

@@ -27,7 +27,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  @apply bg-base-0 text-base-20;
+  @apply bg-base-0 text-base-40;
 }
 
 @media (width >= theme('screens.lg')) {
