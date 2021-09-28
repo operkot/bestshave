@@ -16,8 +16,12 @@ block main
     //- =============================================================================
     //- ##HERO SECTION
     //- =============================================================================
-    section.hero.wrapper
-      .hero-showcase.swiper-container
+    section.hero.media.wrapper
+      .hero-content.media-body
+        h1.hero-title.heading-callout Только #[em качественные] товары для #[em мужчин]
+        a.btn.btn--primary.w-full.px-14.py-4(href="#" class="xs:w-auto") Каталог
+      
+      .hero-showcase.media-figure.swiper-container
         .swiper-wrapper
           .swiper-slide
             img.hero-media(src="img/uploads/gallery-9.png" alt="")
@@ -31,8 +35,16 @@ block main
             img.hero-media(src="img/uploads/gallery-5.png" alt="")
           .swiper-slide
             img.hero-media(src="img/uploads/gallery-6.png" alt="")
-      
-      .hero-content
-        h1.hero-title.heading-callout Только #[em качественные] товары для #[em мужчин]
-        a.btn.btn--primary.w-full.px-14.py-4(href="#" class="xs:w-auto") Каталог
 
+    //- =============================================================================
+    //- ##PROMO SECTION
+    //- =============================================================================
+    section.promo.media.wrapper
+      .promo-body.media-body
+        h2.promo-title Бритье должно приносить удовольствие!
+        .promo-content
+          p В магазине bestshsave.ru представлен широкий ассортимент аксессуаров и косметики для бритья, чтобы удовлетворить самые искушенные запросы наших покупателей. 
+          p А для особых бритвенных эстетов есть возможность офрмить персональный заказ!
+        a.btn.btn--primary.w-full.px-14.py-4(href="#" class="xs:w-auto") Подробнее
+      .promo-figure.media-figure
+        img.promo-img(src="img/uploads/gallery-8.png" alt="")

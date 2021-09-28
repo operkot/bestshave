@@ -22,6 +22,7 @@
 /* ##COMPONENTS
    ========================================================================== */
 @import 'components/container.css';
+@import 'components/media.css';
 
 @import 'components/button.css';
 @import 'components/header.css';
@@ -35,6 +36,8 @@
 @import 'components/socials.css';
 
 @import 'components/hero.css';
+
+@import 'components/promo.css';
 
 /* ##STATE
    ========================================================================== */

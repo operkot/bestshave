@@ -1,0 +1,63 @@
+/* ==========================================================================
+   #MEDIA
+   ========================================================================== */
+
+/**
+ * Media object pattern
+ */
+
+/* ##MEDIA BASE
+   ========================================================================== */
+.media {
+  position: relative;
+  display: flex;
+}
+
+@media (width < theme('screens.lg')) {
+  .media {
+    flex-direction: column;
+  }
+}
+
+@media (width >= theme('screens.lg')) {
+  .media {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* ##MEDIA BODY
+   ========================================================================== */
+@media (width >= theme('screens.lg')) {
+  .media-body {
+    width: 50%;
+    padding-right: 2rem;
+  }
+}
+
+/* ##MEDIA FIGURE
+   ========================================================================== */
+@media (width < theme('screens.lg')) {
+  .media-figure {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+}
+
+@media (width <= theme('screens.md')) {
+  .media-figure {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+
+@media (width >= theme('screens.lg')) {
+  .media-figure {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    max-width: 960px;
+  }
+}

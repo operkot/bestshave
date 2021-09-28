@@ -17,7 +17,6 @@
    ========================================================================== */
 /* prettier-ignore */
 .hero {
-  position: relative;
   overflow: hidden;
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -31,8 +30,6 @@
 
 @media (width >= theme('screens.lg')) {
   .hero {
-    display: flex;
-    align-items: center;
     min-height: 640px;
   }
 }
@@ -45,30 +42,10 @@
 
 /* ##HERO SHOWCASE
    ========================================================================== */
-@media (width >= theme('screens.lg')) {
-  .hero-showcase {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 50%;
-    max-width: 960px;
-    height: 100%;
-    object-fit: cover;
-  }
-}
 
 @media (width < theme('screens.lg')) {
   .hero-showcase {
-    margin-left: -2rem;
-    margin-right: -2rem;
-  }
-}
-
-@media (width < theme('screens.md')) {
-  .hero-showcase {
-    margin-left: -1rem;
-    margin-right: -1rem;
+    order: -1;
   }
 }
 
@@ -105,8 +82,6 @@
 
 @media (width >= theme('screens.lg')) {
   .hero-content {
-    width: 50%;
-    padding-right: 2rem;
     text-align: left;
   }
 }
