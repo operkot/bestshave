@@ -23,6 +23,7 @@
    ========================================================================== */
 @import 'components/container.css';
 @import 'components/media.css';
+@import 'components/gallery.css';
 
 @import 'components/button.css';
 @import 'components/header.css';
