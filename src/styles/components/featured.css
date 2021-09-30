@@ -10,13 +10,17 @@
  * ##FEATIRED BASE
  * ##FEATURED TITLE
  * ##FEATURED LIST
+ * ##FEATURED CAROUSEL
+ * ##FEATURED SLIDE
+ * ##FEATURED PAGINATION
+ * ##FEATURED DOT
+ * ##FEATURED CONTROL
  * 
  */
 
 /* ##FEATIRED BASE
    ========================================================================== */
 .featured {
-  /* overflow: hidden; */
   background-image: url(../img/bg-wood-grey.jpg);
 }
 

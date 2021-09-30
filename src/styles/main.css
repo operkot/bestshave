@@ -30,6 +30,7 @@
 @import 'components/gallery.css';
 @import 'components/tile.css';
 @import 'components/card.css';
+@import 'components/breadcrumbs.css';
 
 @import 'components/header.css';
 @import 'components/logo.css';
@@ -44,6 +45,12 @@
 @import 'components/categories.css';
 @import 'components/featured.css';
 @import 'components/brands.css';
+
+/* ##PLUGINS
+   ========================================================================== */
+/* purgecss start ignore */
+@import 'plugins/brands.css';
+/* purgecss end ignore */
 
 /* ##STATE
    ========================================================================== */

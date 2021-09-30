@@ -1,0 +1,15 @@
+mixin breadcrumbs({ items } = {})
+  -
+    const lastIdx = items.length - 1
+
+  nav#breadcrumbs.breadcrumbs.wrapper.pt-6
+    span
+      span
+        a(href="http://localhost/") Главная 
+        | / 
+        each item, index in items
+          if index === lastIdx
+            span.breadcrumb_last(aria-current="page") #{item}
+          else
+            a(href="http://localhost/") #{item} 
+            | / 

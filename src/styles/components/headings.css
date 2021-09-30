@@ -26,3 +26,28 @@
     font-size: 2.25rem;
   }
 }
+
+/* ##HEADING PAGE
+   ========================================================================== */
+.heading-page {
+  font-weight: 900;
+  line-height: 110%;
+}
+
+@media (width < theme('screens.md')) {
+  .heading-page {
+    font-size: 1.5rem;
+  }
+}
+
+@media (width >= theme('screens.md')) {
+  .heading-page {
+    font-size: 2rem;
+  }
+}
+
+@media (width >= theme('screens.lg')) {
+  .heading-page {
+    font-size: 2.5rem;
+  }
+}

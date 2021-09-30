@@ -1,0 +1,30 @@
+/* ==========================================================================
+   #BREADCRUMBS
+   ========================================================================== */
+
+/**
+ * CONTENTS:
+ * 
+ * ##BREADCRUMBS BASE
+ * ##BREADCRUMBS LINK
+ * 
+ */
+
+/* ##BREADCRUMBS BASE
+   ========================================================================== */
+.breadcrumbs {
+  font-size: 0.875rem;
+  line-height: 110%;
+}
+
+/* ##BREADCRUMBS LINK
+   ========================================================================== */
+.breadcrumbs a {
+  transition: color 0.3s ease;
+
+  @apply text-base-0;
+}
+
+.breadcrumbs a:hover {
+  @apply text-primary-0;
+}
