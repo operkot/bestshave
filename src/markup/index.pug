@@ -114,9 +114,16 @@ block main
 
     section.featured.wrapper
       h2.featured-title.heading-section Рекомендуемые товары
-      ul.featured-list
-        each product in featured
-          +card({ ...product, tag: 'li' })
+      .featured-carousel.swiper
+        ul.swiper-wrapper
+          each product in featured
+            li.featured-slide.swiper-slide
+              +card({ ...product })
+        .featured-pagination
+        button.featured-control.featured-prev
+          +icon({ name: 'angle-left', size: { w: 16, h: 16 } })
+        button.featured-control.featured-next
+          +icon({ name: 'angle-right', size: { w: 16, h: 16 } })
     
     //- =============================================================================
     //- ##BRANDS SECTION

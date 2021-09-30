@@ -16,6 +16,7 @@
 /* ##FEATIRED BASE
    ========================================================================== */
 .featured {
+  /* overflow: hidden; */
   background-image: url(../img/bg-wood-grey.jpg);
 }
 
@@ -74,5 +75,99 @@
 @media (width >= theme('screens.xl')) {
   .featured-list {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* ##FEATURED CAROUSEL
+   ========================================================================== */
+.featured-carousel {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (width >= theme('screens.md')) {
+  .featured-carousel {
+    margin-right: -1.25rem;
+    margin-left: -1.25rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
+.featured-carousel:hover .featured-control {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ##FEATURED SLIDE
+   ========================================================================== */
+.featured-slide {
+  height: auto;
+}
+
+/* ##FEATURED PAGINATION
+   ========================================================================== */
+.featured-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+/* ##FEATURED DOT
+   ========================================================================== */
+.featured-dot {
+  width: 12px;
+  height: 12px;
+  transition: background-color 0.3s ease;
+
+  @apply rounded-full bg-base-20;
+}
+
+.featured-dot:not(:last-child) {
+  margin-right: 8px;
+}
+
+.featured-dot.is-active {
+  @apply bg-primary-0;
+}
+
+.featured-dot.is-clickable {
+  cursor: pointer;
+}
+
+/* ##FEATURED CONTROL
+   ========================================================================== */
+@media (width < theme('screens.md')) {
+  .featured-control {
+    display: none;
+  }
+}
+
+@media (width >= theme('screens.md')) {
+  .featured-control {
+    position: absolute;
+    top: 42.5%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-out;
+
+    @apply rounded-full bg-primary-0 text-base-40;
+  }
+
+  .featured-prev {
+    left: 0;
+  }
+
+  .featured-next {
+    right: 0;
   }
 }
