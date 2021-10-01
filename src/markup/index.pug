@@ -14,141 +14,142 @@ block vars
 
 
 block main
-  main#main.site-main
-    
-    //- =============================================================================
-    //- ##HERO SECTION
-    //- =============================================================================
-    section.hero.media.wrapper
-      .hero-content.media-body
-        h1.hero-title.heading-callout Только #[em качественные] товары для #[em мужчин]
-        a.btn.btn--primary.w-full.px-14.py-4(href="#" class="xs:w-auto") Каталог
+  #content.site-content
+    main#main.site-main
       
-      .hero-showcase.media-figure.swiper
-        .swiper-wrapper
-          .swiper-slide
-            img.hero-media(src="img/uploads/gallery-9.png" alt="")
-          .swiper-slide
-            img.hero-media(src="img/uploads/gallery-10.png" alt="")
-          .swiper-slide
-            img.hero-media(src="img/uploads/gallery-4.png" alt="")
-          .swiper-slide
-            img.hero-media(src="img/uploads/gallery-1.png" alt="")
-          .swiper-slide
-            img.hero-media(src="img/uploads/gallery-5.png" alt="")
-          .swiper-slide
-            img.hero-media(src="img/uploads/gallery-6.png" alt="")
+      //- =============================================================================
+      //- ##HERO SECTION
+      //- =============================================================================
+      section.hero.media.wrapper
+        .hero-content.media-body
+          h1.hero-title.heading-callout Только #[em качественные] товары для #[em мужчин]
+          a.btn.btn--primary.w-full.px-14.py-4(href="#" class="xs:w-auto") Каталог
+        
+        .hero-showcase.media-figure.swiper
+          .swiper-wrapper
+            .swiper-slide
+              img.hero-media(src="img/uploads/gallery-9.png" alt="")
+            .swiper-slide
+              img.hero-media(src="img/uploads/gallery-10.png" alt="")
+            .swiper-slide
+              img.hero-media(src="img/uploads/gallery-4.png" alt="")
+            .swiper-slide
+              img.hero-media(src="img/uploads/gallery-1.png" alt="")
+            .swiper-slide
+              img.hero-media(src="img/uploads/gallery-5.png" alt="")
+            .swiper-slide
+              img.hero-media(src="img/uploads/gallery-6.png" alt="")
 
-    //- =============================================================================
-    //- ##PROMO SECTION
-    //- =============================================================================
-    section.promo.media.wrapper
-      .promo-body.media-body
-        h2.promo-title Бритье должно приносить удовольствие!
-        .promo-content
-          p В магазине bestshsave.ru представлен широкий ассортимент аксессуаров и косметики для бритья, чтобы удовлетворить самые искушенные запросы наших покупателей. 
-          p А для особых бритвенных эстетов есть возможность офрмить персональный заказ!
-        .promo-footer
-          a.btn.btn--primary.w-full.px-14.py-4(href="#" class="xs:w-auto") Подробнее
-      .promo-figure.media-figure
-        img.promo-img(src="img/uploads/gallery-8.png" alt="")
+      //- =============================================================================
+      //- ##PROMO SECTION
+      //- =============================================================================
+      section.promo.media.wrapper
+        .promo-body.media-body
+          h2.promo-title Бритье должно приносить удовольствие!
+          .promo-content
+            p В магазине bestshsave.ru представлен широкий ассортимент аксессуаров и косметики для бритья, чтобы удовлетворить самые искушенные запросы наших покупателей. 
+            p А для особых бритвенных эстетов есть возможность офрмить персональный заказ!
+          .promo-footer
+            a.btn.btn--primary.w-full.px-14.py-4(href="#" class="xs:w-auto") Подробнее
+        .promo-figure.media-figure
+          img.promo-img(src="img/uploads/gallery-8.png" alt="")
 
-    //- =============================================================================
-    //- ##GALLERY SECTION
-    //- =============================================================================
-    section.gallery
-      img(src="img/uploads/gallery-7.png" alt="")
-      img(src="img/uploads/gallery-2.png" alt="")
+      //- =============================================================================
+      //- ##GALLERY SECTION
+      //- =============================================================================
+      section.gallery
+        img(src="img/uploads/gallery-7.png" alt="")
+        img(src="img/uploads/gallery-2.png" alt="")
 
-    //- =============================================================================
-    //- ##CATEGORIES SECTION
-    //- =============================================================================
-    -
-      const categories = [
-        { title: 'Т-образные станки', image: 'img/uploads/razors.png' },
-        { title: 'Бритвенные наборы', image: 'img/uploads/gift-sets.jpg' },
-        { title: 'Лезвия', image: 'img/uploads/de-blades.png' },
-        { title: 'Косметика до бритья', image: 'img/uploads/preshave.png' },
-        { title: 'Косметика для бритья', image: 'img/uploads/shave-cosmetic.png' },
-        { title: 'Косметика после бритья', image: 'img/uploads/aftershave.png' },
-        { title: 'Помазки', image: 'img/uploads/shaving-brushes.png' },
-        { title: 'Аксессуары для бритья', image: 'img/uploads/accessories.png' },
-      ]
+      //- =============================================================================
+      //- ##CATEGORIES SECTION
+      //- =============================================================================
+      -
+        const categories = [
+          { title: 'Т-образные станки', image: 'img/uploads/razors.png' },
+          { title: 'Бритвенные наборы', image: 'img/uploads/gift-sets.jpg' },
+          { title: 'Лезвия', image: 'img/uploads/de-blades.png' },
+          { title: 'Косметика до бритья', image: 'img/uploads/preshave.png' },
+          { title: 'Косметика для бритья', image: 'img/uploads/shave-cosmetic.png' },
+          { title: 'Косметика после бритья', image: 'img/uploads/aftershave.png' },
+          { title: 'Помазки', image: 'img/uploads/shaving-brushes.png' },
+          { title: 'Аксессуары для бритья', image: 'img/uploads/accessories.png' },
+        ]
 
-    section.categories.wrapper
-      h2.categories-title.heading-section Наши товары
+      section.categories.wrapper
+        h2.categories-title.heading-section Наши товары
 
-      ul.categories-list
-        each category in categories
-          li
-            +tile({ title: category.title, image: category.image, href: '#' })
-    
-    //- =============================================================================
-    //- ##FEATURED PRODUCTS SECTION
-    //- =============================================================================
-    -
-      const featured = [
-        {
-          image: 'img/uploads/muhle-r94-rocca.png',
-          title: 'Станок для бритья Muhle R 94 Rocca',
-          price: '4 500',
-          salePrice: '6 500'
-        },
-        {
-          image: 'img/uploads/muhle-r95-rocca.png',
-          title: 'Станок для бритья Muhle R 95 Rocca',
-          price: '6 900',
-        },
-        {
-          image: 'img/uploads/muhle-r-41-traditional.png',
-          title: 'Станок для бритья Muhle R41',
-          price: '2 600',
-        },
-        {
-          image: 'img/uploads/muhle-r89-traditional.png',
-          title: 'Станок для бритья Muhle R89',
-          price: '2 600',
-          isOutOfStock: true
-        }
-      ]
+        ul.categories-list
+          each category in categories
+            li
+              +tile({ title: category.title, image: category.image, href: '#' })
+      
+      //- =============================================================================
+      //- ##FEATURED PRODUCTS SECTION
+      //- =============================================================================
+      -
+        const featured = [
+          {
+            image: 'img/uploads/muhle-r94-rocca.png',
+            title: 'Станок для бритья Muhle R 94 Rocca',
+            price: '4 500',
+            salePrice: '6 500'
+          },
+          {
+            image: 'img/uploads/muhle-r95-rocca.png',
+            title: 'Станок для бритья Muhle R 95 Rocca',
+            price: '6 900',
+          },
+          {
+            image: 'img/uploads/muhle-r-41-traditional.png',
+            title: 'Станок для бритья Muhle R41',
+            price: '2 600',
+          },
+          {
+            image: 'img/uploads/muhle-r89-traditional.png',
+            title: 'Станок для бритья Muhle R89',
+            price: '2 600',
+            isOutOfStock: true
+          }
+        ]
 
-    section.featured.wrapper
-      h2.featured-title.heading-section Рекомендуемые товары
-      .featured-carousel.swiper
-        ul.swiper-wrapper
-          each product in featured
-            li.featured-slide.swiper-slide
-              +card({ ...product })
-        .featured-pagination
-        button.featured-control.featured-prev
-          +icon({ name: 'angle-left', size: { w: 16, h: 16 } })
-        button.featured-control.featured-next
-          +icon({ name: 'angle-right', size: { w: 16, h: 16 } })
-    
-    //- =============================================================================
-    //- ##BRANDS SECTION
-    //- =============================================================================
-    -
-      const brands = [
-        'muhle',
-        'floid',
-        'truefitt-and-hill-logo',
-        'proraso',
-        'merkur',
-        'taylor-of-old-bond-street',
-        'razorock',
-        'tabac-original',
-        'fatip',
-        'cella-milano',
-        'martin-de-candre',
-        'omega',
-        'osma',
-        'lea'
-      ]
+      section.featured.wrapper
+        h2.featured-title.heading-section Рекомендуемые товары
+        .featured-carousel.swiper
+          ul.swiper-wrapper
+            each product in featured
+              li.featured-slide.swiper-slide
+                +card({ ...product })
+          .featured-pagination
+          button.featured-control.featured-prev
+            +icon({ name: 'angle-left', size: { w: 16, h: 16 } })
+          button.featured-control.featured-next
+            +icon({ name: 'angle-right', size: { w: 16, h: 16 } })
+      
+      //- =============================================================================
+      //- ##BRANDS SECTION
+      //- =============================================================================
+      -
+        const brands = [
+          'muhle',
+          'floid',
+          'truefitt-and-hill-logo',
+          'proraso',
+          'merkur',
+          'taylor-of-old-bond-street',
+          'razorock',
+          'tabac-original',
+          'fatip',
+          'cella-milano',
+          'martin-de-candre',
+          'omega',
+          'osma',
+          'lea'
+        ]
 
-    section.brands
-      .brands-slider.swiper
-        .swiper-wrapper
-          each brand in brands
-            .brands-slide.swiper-slide
-              img.brands-logo(src=`img/uploads/${brand}.png` width="132" height="132" alt="")
+      section.brands
+        .brands-slider.swiper
+          .swiper-wrapper
+            each brand in brands
+              .brands-slide.swiper-slide
+                img.brands-logo(src=`img/uploads/${brand}.png` width="132" height="132" alt="")

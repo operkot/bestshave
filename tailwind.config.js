@@ -3,7 +3,7 @@ module.exports = {
   purge: {
     enabled: true,
     content: ['src/**/*.html', 'src/**/*.pug', 'src/**/*.js'],
-    safelist: ['pt-6', 'pb-20'],
+    safelist: ['mb-6', 'pt-6', 'pb-20'],
   },
   theme: {
     screens: {

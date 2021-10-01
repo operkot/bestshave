@@ -31,8 +31,11 @@
 @import 'components/tile.css';
 @import 'components/card.css';
 @import 'components/breadcrumbs.css';
+@import 'components/pagination.css';
+@import 'components/orderby.css';
 
 @import 'components/header.css';
+@import 'components/sidebar.css';
 @import 'components/logo.css';
 @import 'components/menu.css';
 @import 'components/tools.css';
@@ -45,6 +48,9 @@
 @import 'components/categories.css';
 @import 'components/featured.css';
 @import 'components/brands.css';
+@import 'components/catalog.css';
+@import 'components/products.css';
+@import 'components/woocommerce.css';
 
 /* ##PLUGINS
    ========================================================================== */

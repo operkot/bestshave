@@ -1,0 +1,65 @@
+/* ==========================================================================
+   #SIDEBAR
+   ========================================================================== */
+
+/* ##SIDEBAR BASE
+   ========================================================================== */
+.sidebar {
+}
+
+/* ##SIDEBAR TRIGGER
+   ========================================================================== */
+@media (width < theme('screens.lg')) {
+  .sidebar-trigger {
+    width: 100%;
+    max-width: 257px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    line-height: 1.125;
+  }
+}
+
+@media (width >= theme('screens.lg')) {
+  .sidebar-trigger {
+    display: none !important;
+  }
+}
+
+/* ##SIDEBAR CLOSE
+   ========================================================================== */
+@media (width < theme('screens.lg')) {
+  .sidebar-close {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (width >= theme('screens.lg')) {
+  .sidebar-close {
+    display: none;
+  }
+}
+
+/* ##SIDEBAR CONTENT
+   ========================================================================== */
+@media (width < theme('screens.lg')) {
+  .sidebar-content {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 11;
+    overflow-y: auto;
+    width: 280px;
+    min-height: 100vh;
+    padding: 1.5rem 1rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+
+    @apply bg-base-40;
+  }
+
+  .sidebar-content.is-open {
+    transform: translateX(0);
+    box-shadow: 50vw 0 0 50vw rgba(0, 0, 0, 0.7);
+  }
+}

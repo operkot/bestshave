@@ -1,0 +1,47 @@
+/* ==========================================================================
+   #CATALOG
+   ========================================================================== */
+
+/* ##CATALOG BASE
+   ========================================================================== */
+.catalog {
+  display: grid;
+}
+
+@media (width < theme('screens.lg')) {
+  .catalog {
+    grid-template-rows: min-content;
+    row-gap: 1.5rem;
+  }
+}
+
+@media (width >= theme('screens.lg')) {
+  .catalog {
+    grid-template-columns: 280px 1fr;
+    column-gap: 3rem;
+  }
+
+  .catalog .site-main {
+    grid-column: 2;
+  }
+}
+
+/* ##CATALOG TOOLS
+   ========================================================================== */
+.catalog-tools:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+@media (width < theme('screens.md')) {
+  .catalog-tools .pagination {
+    display: none;
+  }
+}
+
+@media (width >= theme('screens.md')) {
+  .catalog-tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

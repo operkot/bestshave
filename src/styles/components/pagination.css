@@ -1,0 +1,57 @@
+/* ==========================================================================
+   #PAGINATION
+   ========================================================================== */
+
+/**
+ * CONTENTS:
+ * 
+ * ##PAGINATION LIST
+ * ##PAGINATION LIST
+ * ##PAGINATION ITEM
+ * ##PAGINATION LINK
+ * 
+ */
+
+/* ##PAGINATION LIST
+   ========================================================================== */
+.pagination > ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* ##PAGINATION ITEM
+   ========================================================================== */
+.pagination > ul > li:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+/* ##PAGINATION LINK
+   ========================================================================== */
+/* prettier-ignore */
+.pagination a,
+.pagination span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-width: 2px;
+  border-style: solid;
+  transition: 
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+
+  @apply border-base-0;
+}
+
+.pagination a:hover,
+.pagination a.current,
+.pagination span:hover,
+.pagination span.current {
+  @apply bg-primary-0 border-primary-0 text-base-40;
+}

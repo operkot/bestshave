@@ -1,0 +1,6 @@
+mixin pagination({ classname } = {})
+  nav.woocommerce-pagination.pagination(class=classname)
+    ul.page-numbers
+      li: span.page-numbers.current(aria-current="page") 1
+      li: a.page-numbers(href="#") 2
+      li: a.next.page-numbers(href="#") &gt;

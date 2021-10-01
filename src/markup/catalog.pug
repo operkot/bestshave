@@ -1,0 +1,80 @@
+extends layout/default
+
+include mixin/breadcrumbs
+include mixin/card
+include mixin/icon
+include mixin/orderby
+include mixin/pagination
+
+block vars
+  -
+    locals.page = {
+      language: 'ru',
+      name: 'catalog',
+      title: 'Каталог • Bestshave.ru',
+      description: 'Page description'
+    }
+  
+    const products = [
+      {
+        image: 'img/uploads/muhle-r94-rocca.png',
+        title: 'Станок для бритья Muhle R 94 Rocca',
+        price: '4 500',
+        salePrice: '6 500'
+      },
+      {
+        image: 'img/uploads/muhle-r95-rocca.png',
+        title: 'Станок для бритья Muhle R 95 Rocca',
+        price: '6 900',
+      },
+      {
+        image: 'img/uploads/muhle-r96-rocca.png',
+        title: 'Станок для бритья Muhle R 96 Rocca',
+        price: '6 600',
+      },
+      {
+        image: 'img/uploads/muhle-r-41-traditional.png',
+        title: 'Станок для бритья Muhle R41',
+        price: '2 600',
+      },
+      {
+        image: 'img/uploads/muhle-r89-traditional.png',
+        title: 'Станок для бритья Muhle R89',
+        price: '2 600',
+        isOutOfStock: true
+      },
+      {
+        image: 'img/uploads/muhle-r-41-traditional.png',
+        title: 'Станок для бритья Muhle R41',
+        price: '2 600',
+      }
+    ]
+
+block main
+  +breadcrumbs({ items: ['Каталог', 'Косметика для бритья'], classname: 'pt-6' })
+
+  header.wrapper.mb-8.pt-6
+    h1.heading-page Косметика для бритья
+
+  .site-content.catalog.wrapper.pb-20.woocommerce-page(id="content")
+    main.site-main(id="main")
+      .catalog-tools
+        +orderby
+        +pagination({ classname: 'ml-auto hidden md:block' })
+      
+      ul.products
+        each product in products
+          li
+            +card({ ...product })
+      
+      +pagination
+
+      
+
+    aside.site-side.sidebar(id="sidebar" role="complementary" x-data="sidebar" @click.outside="close")
+      button.sidebar-trigger.btn.btn--primary(type="button" @click="toggle") Фильтр
+      .sidebar-content(:class="isOpen && 'is-open'") 
+        button.sidebar-close(type="button" @click="close")
+          +icon({ name: 'times', size: { w: 24, h: 24 } })
+        p Sidebar content
+      
