@@ -27,7 +27,7 @@
   outline: none;
 }
 
-@media (width < theme('screens.md')) {
+@media (width < theme('screens.sm')) {
   .orderby {
     width: 100%;
   }

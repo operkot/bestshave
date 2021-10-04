@@ -26,6 +26,17 @@
   }
 }
 
+.catalog .site-side {
+  order: -1;
+}
+
+/* ##CATALOG FULLWIDTH
+   ========================================================================== */
+.catalog--fullwidth {
+  grid-template-columns: 1fr;
+  column-gap: normal;
+}
+
 /* ##CATALOG TOOLS
    ========================================================================== */
 .catalog-tools:not(:last-child) {
@@ -34,7 +45,7 @@
 
 @media (width < theme('screens.md')) {
   .catalog-tools .pagination {
-    display: none;
+    display: none !important;
   }
 }
 

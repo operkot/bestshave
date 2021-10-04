@@ -50,12 +50,12 @@
 @import 'components/brands.css';
 @import 'components/catalog.css';
 @import 'components/products.css';
-@import 'components/woocommerce.css';
 
 /* ##PLUGINS
    ========================================================================== */
 /* purgecss start ignore */
 @import 'plugins/brands.css';
+@import 'plugins/filter.css';
 /* purgecss end ignore */
 
 /* ##STATE

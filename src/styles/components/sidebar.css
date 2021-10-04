@@ -19,6 +19,12 @@
   }
 }
 
+@media (width < theme('screens.sm')) {
+  .sidebar-trigger {
+    max-width: none;
+  }
+}
+
 @media (width >= theme('screens.lg')) {
   .sidebar-trigger {
     display: none !important;
