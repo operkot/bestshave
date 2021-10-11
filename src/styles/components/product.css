@@ -1,0 +1,239 @@
+/* ==========================================================================
+   #PRODUCT
+   ========================================================================== */
+
+/**
+ * Single product page styles
+ */
+
+/* ##PRODUCT BASE
+   ========================================================================== */
+.product {
+  display: grid;
+  margin-bottom: 5rem;
+}
+
+@media (width < theme('screens.xl')) {
+  .product {
+    row-gap: 2rem;
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (width >= theme('screens.xl')) {
+  .product {
+    grid-template-columns: 500px minmax(0, 1fr);
+    column-gap: 2rem;
+    row-gap: 3rem;
+  }
+}
+
+/* ##PRODUCT SHOWCASE
+   ========================================================================== */
+.product-showcase {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+@media (width < theme('screens.xl')) {
+  .product-showcase {
+    justify-self: center;
+  }
+}
+
+/* ##PRODUCT SUMMARY
+   ========================================================================== */
+.product-summary {
+}
+
+/* ##PRODUCT LABEL
+   ========================================================================== */
+.product-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  margin-bottom: 1rem;
+}
+
+/* ##PRODUCT HEADER
+   ========================================================================== */
+.product-header:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+/* ##PRODUCT TITLE
+   ========================================================================== */
+.product-title {
+  font-weight: 700;
+  line-height: 1;
+}
+
+.product-title:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+@media (width < theme('screens.md')) {
+  .product-title {
+    font-size: 2rem;
+  }
+}
+
+@media (width >= theme('screens.md')) {
+  .product-title {
+    font-size: 2.25rem;
+  }
+}
+
+/* ##PRODUCT RATING
+   ========================================================================== */
+.product-rating {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ##PRODUCT ORDER
+   ========================================================================== */
+.product-order:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+/* ##PRODUCT PRICE
+   ========================================================================== */
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1;
+
+  @apply text-primary-0;
+}
+
+.product-price:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+.product-price del {
+  margin-right: 0.5rem;
+
+  @apply text-base-10;
+}
+
+.product-price ins {
+  text-decoration: none;
+}
+
+/* ##PRODUCT AVAILABILITY
+   ========================================================================== */
+.product-availability {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.product-availability:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.product-availability.in-stock,
+.product-availability.available-on-backorder {
+  @apply text-success;
+}
+
+.product-availability.out-of-stock {
+  @apply text-primary-0;
+}
+
+/* ##PRODUCT CART
+   ========================================================================== */
+.product-cart {
+  display: flex;
+  align-items: center;
+}
+
+.product-cart:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+/* ##PRODUCT QUANTITY
+   ========================================================================== */
+.product-quantity {
+  width: 70px;
+  padding: 0.75rem 0.5rem;
+  font-size: 1rem;
+  line-height: 140%;
+  text-align: center;
+}
+
+/* ##PRODUCT CTA
+   ========================================================================== */
+.product-cta {
+  width: 100%;
+  max-width: 240px;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+  font-size: 1.125rem;
+}
+
+/* ##PRODUCT META
+   ========================================================================== */
+.product-meta {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  row-gap: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-top: 1px dashed #aeaeae;
+  border-bottom: 1px dashed #aeaeae;
+  font-size: 0.875rem;
+}
+
+.product-meta:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+/* ##PRODUCT CATEGORIES
+   ========================================================================== */
+.product-categories a {
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.product-categories a:hover {
+  @apply text-primary-0;
+}
+
+/* ##PRODUCT INFO
+   ========================================================================== */
+.product-info {
+  grid-column: 1 / -1;
+}
+
+/* ##PRODUCT DESCRIPTION
+   ========================================================================== */
+.product-description p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* ##PRODUCT SPECS
+   ========================================================================== */
+.product-specs {
+  width: 100%;
+  table-layout: fixed;
+  font-size: 0.875rem;
+}
+
+@media (width >= theme('screens.md')) {
+  .product-specs {
+    font-size: 1rem;
+  }
+}
+
+.product-specs tr:nth-child(even) {
+  @apply bg-base-30;
+}
+
+.product-specs td {
+  padding: 0.25rem 0.5rem;
+}

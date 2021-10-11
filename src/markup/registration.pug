@@ -1,0 +1,42 @@
+extends layout/default
+
+include mixin/breadcrumbs
+
+block vars
+  -
+    locals.page = {
+      language: 'ru',
+      name: 'login',
+      title: 'Регистрация • Bestshave.ru',
+      description: 'Page description'
+    }
+
+block main
+  .site-content.pt-6.pb-20(id="content")
+    +breadcrumbs({
+      items: ['Авторизация'],
+      classname: 'wrapper mb-6'
+    })
+
+    main.site-main(id="main")
+      header.entry-header.mb-10.page_header.text-center
+        h1.entry-title.heading-page Регистрация
+
+      form.form.form--sm(method="post")
+        p.form-row.form-row-wide.mb-6
+          label.form-label(for="reg_email") Email&nbsp;#[span.required *]
+          input.input(type="email" name="email" id="reg_email" autocomplete="email" value="")
+
+        p.form-row.form-row-wide.mb-6
+          label.form-label(for="reg_password") Пароль&nbsp;#[span.required *]
+          input.input(type="password" name="password" id="reg_password" autocomplete="new-password")
+        
+        .form-row.form-row-wide.mb-6
+          p Ваши личные данные будут использоваться для упрощения вашей работы с сайтом, управления доступом к вашей учётной записи и для других целей, описанных в нашей #[a(href="http://localhost/?page_id=3" target="_blank") политика конфиденциальности].
+
+        p.form-row.form-row-wide.text-center.mb-6
+          input(type="hidden" id="woocommerce-register-nonce" name="woocommerce-register-nonce" value="c4a27daef5")
+          input(type="hidden" name="_wp_http_referer" value="/registration/")
+          button.btn.btn--primary.px-12.py-4(type="submit" name="register" value="Регистрация") Регистрация
+
+        p.form-row.form-row-wide.text-center Уже есть аккаунт? #[a.link.underline(href="http://localhost/login/") Авторизируйтесь]

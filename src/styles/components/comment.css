@@ -1,0 +1,39 @@
+/* ==========================================================================
+   #COMMENT
+   ========================================================================== */
+
+/* ##COMMENT BASE
+   ========================================================================== */
+.comment {
+  display: grid;
+  grid-gap: 1.5rem;
+  padding: 1.5rem;
+
+  @apply bg-base-30;
+}
+
+@media (width >= theme('screens.lg')) {
+  .comment {
+    grid-template-columns: 266px minmax(0, 1fr);
+  }
+}
+
+/* ##COMMENT META
+   ========================================================================== */
+.comment-meta {
+  display: grid;
+  row-gap: 0.25rem;
+  justify-content: flex-start;
+}
+
+/* ##COMMENT VERIFIED
+   ========================================================================== */
+.comment-verified {
+  font-style: normal;
+}
+
+/* ##COMMENT PUBLISHED
+   ========================================================================== */
+.comment-published {
+  font-size: 0.875rem;
+}

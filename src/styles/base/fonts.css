@@ -53,3 +53,14 @@
   font-style: normal;
   font-weight: 900;
 }
+
+/* prettier-ignore */
+@font-face {
+  font-family: 'star';
+  src:  
+    url('../fonts/star.eot') format('eot'),
+    url('../fonts/star.woff') format('woff');
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+}

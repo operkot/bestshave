@@ -51,30 +51,31 @@ block vars
     ]
 
 block main
-  +breadcrumbs({ items: ['Каталог', 'Косметика для бритья'], classname: 'pt-6' })
+  .site-content.wrapper.pt-6.pb-20(id="content")
+    +breadcrumbs({ items: ['Каталог', 'Косметика для бритья'], classname: 'mb-6' })
 
-  header.wrapper.mb-10.pt-6
-    h1.heading-page Косметика для бритья
+    header.mb-10
+      h1.heading-page Косметика для бритья
 
-  .site-content.catalog.wrapper.pb-20.woocommerce-page(id="content")
-    main.site-main(id="main")
-      .catalog-tools
-        +orderby
-        +pagination({ classname: 'ml-auto hidden md:block' })
-      
-      ul.products
-        each product in products
-          li
-            +card({ ...product })
-      
-      +pagination
+    .catalog
+      main.site-main(id="main")
+        .catalog-tools
+          +orderby
+          +pagination({ classname: 'ml-auto hidden md:block' })
+        
+        ul.products
+          each product in products
+            li
+              +card({ ...product })
+        
+        +pagination
 
-      
+        
 
-    aside.site-side.sidebar(id="sidebar" role="complementary" x-data="sidebar" @click.outside="close")
-      button.sidebar-trigger.btn.btn--primary(type="button" @click="toggle") Фильтр
-      .sidebar-content(:class="isOpen && 'is-open'") 
-        button.sidebar-close(type="button" @click="close")
-          +icon({ name: 'times', size: { w: 24, h: 24 } })
-        p Sidebar content
-      
+      aside.site-side.sidebar(id="sidebar" role="complementary" x-data="sidebar" @click.outside="close")
+        button.sidebar-trigger.btn.btn--primary(type="button" @click="toggle") Фильтр
+        .sidebar-content(:class="isOpen && 'is-open'") 
+          button.sidebar-close(type="button" @click="close")
+            +icon({ name: 'times', size: { w: 24, h: 24 } })
+          p Sidebar content
+        

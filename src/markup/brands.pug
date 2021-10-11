@@ -13,10 +13,11 @@ block vars
 
 
 block main
-  +breadcrumbs({ items: ['Бренды', 'Proraso'], classname: 'pt-6' })
   
-  #content.site-content.pt-6.pb-20
-    main#main.site-main.wrapper
+  #content.site-content.wrapper.pt-6.pb-20
+    +breadcrumbs({ items: ['Бренды', 'Proraso'], classname: 'mb-6' })
+
+    main#main.site-main
       article#post-206.post-206.page.type-page.status-publish.hentry
         header.entry-header.mb-10
           h1.entry-title.heading-page.font-black Бренды

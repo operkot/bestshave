@@ -6,6 +6,7 @@ import heroShowcase from './components/hero-showcase'
 import brandsSlider from './components/brands-slider'
 import featuredCarousel from './components/featured-carousel'
 import sidebar from './components/sidebar'
+import showcase from './components/showcase'
 
 import '../styles/main.css'
 
@@ -18,4 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
   heroShowcase()
   brandsSlider()
   featuredCarousel()
+  showcase()
 })

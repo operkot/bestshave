@@ -1,0 +1,52 @@
+/* ==========================================================================
+   #REVIEWS
+   ========================================================================== */
+
+/**
+ * Product reviews section
+ */
+
+/* ##REVIEWS BASE
+   ========================================================================== */
+.reviews {
+}
+
+/* ##REVIEWS NOREVIEWS
+   ========================================================================== */
+/* purgecss start ignore  */
+.reviews-noreviews {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.reviews-noreviews:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+/* purgecss end ignore  */
+
+/* ##REVIEWS LIST
+   ========================================================================== */
+.reviews-list {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.reviews-list:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+/* ##REVIEWS FORM
+   ========================================================================== */
+.reviews-form {
+  width: 100%;
+  max-width: 740px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ##REVIEWS VERIFICATION
+   ========================================================================== */
+.reviews-verification {
+  text-align: center;
+}

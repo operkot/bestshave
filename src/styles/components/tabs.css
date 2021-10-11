@@ -1,0 +1,92 @@
+/* ==========================================================================
+   #TABS
+   ========================================================================== */
+
+/* ##TABS BASE
+   ========================================================================== */
+.tabs {
+}
+
+/* ##TABS NAV
+   ========================================================================== */
+.tabs-nav {
+  display: flex;
+}
+
+@media (width < theme('screens.md')) {
+  .tabs-nav {
+    flex-direction: column;
+  }
+}
+
+@media (width >= theme('screens.md')) {
+  .tabs-nav {
+    flex-direction: row;
+    align-items: flex-end;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+
+    @apply border-base-20;
+  }
+
+  .tabs-nav li:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+}
+
+/* ##TABS TRIGGER
+   ========================================================================== */
+.tabs-trigger {
+  display: block;
+  margin-bottom: -2px;
+  padding: 0.875rem 0.5rem;
+  border-bottom: 2px solid transparent;
+  font-weight: 700;
+  line-height: 100%;
+  white-space: nowrap;
+  transition: border-color 0.3s ease, color 0.3s ease;
+
+  @apply text-base-20;
+}
+
+@media (width < theme('screens.xs')) {
+  .tabs-trigger {
+    font-size: 0.875rem;
+  }
+}
+
+@media (width >= theme('screens.xs')) {
+  .tabs-trigger {
+    font-size: 1.125rem;
+  }
+}
+
+@media (width < theme('screens.md')) {
+  .tabs-trigger {
+    @apply bg-base-30 text-base-0;
+  }
+}
+
+@media (width < theme('screens.md')) {
+  .tabs-nav li.active .tabs-trigger {
+    @apply bg-primary-0 text-base-40;
+  }
+}
+
+@media (width >= theme('screens.md')) {
+  .tabs-nav li.active .tabs-trigger {
+    border-bottom-width: 2px;
+
+    @apply text-base-10 border-base-10;
+  }
+}
+
+.tabs-trigger:hover {
+  @apply text-primary-0;
+}
+
+/* ##TABS PANEL
+   ========================================================================== */
+.tabs-panel {
+  padding-top: 1.5rem;
+}

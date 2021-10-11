@@ -1,0 +1,40 @@
+/* ==========================================================================
+   #INPUT
+   ========================================================================== */
+
+/**
+ * CONTENS:
+ * 
+ * ##INPUT BASE
+ * 
+ */
+
+/* ##INPUT BASE
+   ========================================================================== */
+.input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 140%;
+
+  background-color: #e3e3e3;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  transition: opacity 0.3s ease;
+}
+
+.input:focus::placeholder {
+  opacity: 0;
+}
+
+textarea.input {
+  resize: vertical;
+  min-height: 200px;
+}

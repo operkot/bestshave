@@ -1,0 +1,69 @@
+/* ==========================================================================
+   #RELATED
+   ========================================================================== */
+
+/**
+ * Related products section
+ */
+
+/* ##RELATED BASE
+   ========================================================================== */
+.related {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-image: url(../img/bg-wood-grey.jpg);
+}
+
+/* ##RELATED TITLE
+   ========================================================================== */
+.related-title {
+  font-weight: 700;
+}
+
+@media (width < theme('screens.md')) {
+  .related-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (width >= theme('screens.md')) {
+  .related-title {
+    font-size: 2rem;
+  }
+}
+
+@media (width < theme('screens.xl')) {
+  .related-title {
+    text-align: center;
+  }
+}
+
+.related-title:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+/* ##REALATED LIST
+   ========================================================================== */
+.related-list {
+  display: grid;
+  grid-gap: 1.5rem;
+  justify-content: center;
+}
+
+@media (width >= theme('screens.md')) and (width < theme('screens.lg')) {
+  .related-list {
+    grid-template-columns: repeat(2, minmax(0, 320px));
+  }
+}
+
+@media (width >= theme('screens.lg')) and (width < theme('screens.xl')) {
+  .related-list {
+    grid-template-columns: repeat(2, minmax(0, 360px));
+  }
+}
+
+@media (width >= theme('screens.xl')) {
+  .related-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,46 @@
+extends layout/default
+
+include mixin/breadcrumbs
+
+block vars
+  -
+    locals.page = {
+      language: 'ru',
+      name: 'login',
+      title: 'Авторизация • Bestshave.ru',
+      description: 'Page description'
+    }
+
+block main
+  .site-content.pt-6.pb-20(id="content")
+    +breadcrumbs({
+      items: ['Авторизация'],
+      classname: 'wrapper mb-6'
+    })
+
+    main.site-main(id="main")
+      header.entry-header.mb-10.page_header.text-center
+        h1.entry-title.heading-page Авторизация
+
+      form.form.form--sm(method="post")
+        p.form-row.form-row-wide.mb-6
+          label.form-label(for="username") Имя пользователя или Email&nbsp;#[span.required *]
+          input.input(type="text" name="username" id="username" autocomplete="username" value="")
+
+        p.form-row.form-row-wide.mb-6
+          label.form-label(for="password") Пароль&nbsp;#[span.required *]
+          input.input(type="password" name="password" id="password" autocomplete="current-password")
+        
+        p.form-row.form-row-wide.mb-6
+          label.checkbox
+            input.checkbox-input(name="rememberme" type="checkbox" id="rememberme" value="forever")
+            span Запомнить меня
+
+        p.form-row.form-row-wide.text-center.mb-6
+          input(type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="f1b3218761")
+          input(type="hidden" name="_wp_http_referer" value="/login/")
+          button(type="submit" class="btn btn--primary px-12 py-4" name="login" value="Войти") Войти
+
+        .form-row.form-row-wide.text-center
+          p Нет аккакнта? #[a.link.underline(href="#") Зарегистрируйтесь]
+          a.link.underline(href="#") Забыли свой пароль?

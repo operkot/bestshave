@@ -1,0 +1,177 @@
+extends layout/default
+
+include mixin/breadcrumbs
+include mixin/icon
+include mixin/card
+include mixin/comment-list
+include mixin/comment-form
+
+
+block vars
+  -
+    locals.page = {
+      language: 'ru',
+      name: 'catalog',
+      title: 'Каталог • Bestshave.ru',
+      description: 'Page description'
+    }
+
+block main
+  .site-content.pt-6(id="content")
+    +breadcrumbs({
+      items: ['Каталог', 'Т-образные станки', 'Станок для бритья Muhle R 95 Rocca'],
+      classname: 'wrapper mb-6'
+    })
+
+    main.site-main(id="main")
+      .product.wrapper
+        //- 
+        //- ##PRODUCT SHOWCASE 
+        //- 
+        .product-showcase.showcase
+          .showcase-main.swiper
+            .swiper-wrapper
+              .swiper-slide
+                img(src="img/uploads/muhle-r95-rocca.png" alt="")
+              .swiper-slide
+                img(src="img/uploads/muhle-r95-rocca-2.png" alt="")
+              .swiper-slide
+                img(src="img/uploads/muhle-r95-rocca-3.png" alt="")
+          .showcase-thumbs.swiper
+            .swiper-wrapper
+              .swiper-slide
+                img(src="img/uploads/muhle-r95-rocca.png" alt="")
+              .swiper-slide
+                img(src="img/uploads/muhle-r95-rocca-2.png" alt="")
+              .swiper-slide
+                img(src="img/uploads/muhle-r95-rocca-3.png" alt="")
+              
+        
+        //- 
+        //- ##PRODUCT SUMMARY 
+        //- 
+        .product-summary
+          p.product-label.label.label--primary.px-8 Sale
+
+          .product-header
+            h1.product-title Станок для бритья Muhle R 95 Rocca
+
+            .product-rating
+              .star-rating.mr-2(role="img" aria-label="Оценка 4.75 из 5")
+                span(style="width:95%") Рейтинг #[strong.rating 4.75] из 5 на основе опроса #[span.rating 4] пользователей
+              a.link(href="#reviews" class="woocommerce-review-link" rel="nofollow") (#[span.count 4] отзыва клиентов)
+
+          p.product-price
+            del 6 500 ₽ 
+            ins 4 500 ₽
+          
+          p.product-availability.in-stock В наличии
+
+          form.product-cart
+            input.product-quantity.input.mr-4(
+              type="number"
+              step="1"
+              min="1"
+              max="5"
+              name="quantity"
+              value="1"
+              title="Кол-во"
+              placeholder=""
+              inputmode="numeric"
+            )
+            button.btn.btn--primary.product-cta(type="submit") Купить
+
+          //- p.product-meta Категория: #[a.link.underline(href="#" class="hover:no-underline") Т-образные станки]
+          .product-meta
+            p Производитель: #[a.link.underline(href="#") Muhle]
+            span.posted_in Категория: #[a.link.underline(href="#" rel="tag") Т-образные бритвы] 
+
+        //- 
+        //- ##PRODUCT INFO 
+        //- 
+        .product-info.tabs
+          ul.tabs-nav
+            li.active: a.tabs-trigger(href="#") Описание
+            li: a.tabs-trigger(href="#") Детали
+            li: a.tabs-trigger(href="#") Отзывы (0)
+          
+          .tabs-panel(style="display:none;")
+            .product-description
+              p Современный Т-образный станок для бритья Muhle R 95 Rocca с закрытым гребнем. Сочетает в себе мужественный мужской дизайн и удобную форму. Превратит Ваше бритье с ежедневной рутинной процедуры в приятную привычку. Бритва совместима с любыми лезвиями обычного размера.
+
+              p Бритва Muhle R 95 Rocca относится к серии Rocca. А потому стиль ее более современный и выразительный, чем многое из того, что до сих пор было известно от Muhle. Особенность бритвы в том, что изготовлена она из качественной и сверхпрочной нержавеющей стали. Это очень надежная бритва!
+
+              P Т-образный станок R 95 Rocca — стильный и удобный аксессуар для бритья с прекрасными дополнительными удобствами. Материал ручки бритвы — нержавеющая сталь и берест (березовая кора). Берест уже несколько веков успешно используется при производстве самых разнообразных изделий. Ведь красивая текстура коры поражает с первых минут — приятная и теплая на ощупь. Материал очень прочный и долговечный. В сочетании с матовым сатиновым покрытием еще и обеспечивает хорошее сцепление с рукой.
+          
+          .tabs-panel(style="display:none;")
+            table.product-specs
+              tbody
+                tr
+                  td Диаметр ручки:
+                  td 14 мм
+                tr
+                  td Длина бритвы, мм:	
+                  td 105 мм
+                tr
+                  td Материал головки:	
+                  td Нержавеющая сталь
+                tr
+                  td Материал ручки:	
+                  td Нержавеющая сталь\Береста
+                tr
+                  td Тип бритвенной головки:
+                  td Closed Comb
+                tr
+                  td Тип т-бритвы:	
+                  td Двосторонная бритва
+                tr
+                  td Цвет ручки:	
+                  td Коричневый
+                tr
+                  td Вес:		
+                  td 80г
+                tr
+                  td Производитель:		
+                  td Muhle
+                tr
+                  td Страна:			
+                  td Германия
+
+          .tabs-panel
+            .reviews
+              +comment-list
+              .reviews-form
+                +comment-form
+        
+
+      .related.wrapper
+        -
+          const related = [
+            {
+              image: 'img/uploads/muhle-r95-rocca.png',
+              title: 'Станок для бритья Muhle R 95 Rocca',
+              price: '6 900',
+            },
+            {
+              image: 'img/uploads/muhle-r96-rocca.png',
+              title: 'Станок для бритья Muhle R 96 Rocca',
+              price: '6 600',
+            },
+            {
+              image: 'img/uploads/muhle-r-41-traditional.png',
+              title: 'Станок для бритья Muhle R41',
+              price: '2 600',
+            },
+            {
+              image: 'img/uploads/muhle-r89-traditional.png',
+              title: 'Станок для бритья Muhle R89',
+              price: '2 600',
+              isOutOfStock: true
+            }
+          ]
+        
+        .related-title Сопутствующие товары
+        ul.related-list
+          each product in related
+            li
+              +card({ ...product })

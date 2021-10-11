@@ -1,0 +1,29 @@
+/* ==========================================================================
+   #LABEL
+   ========================================================================== */
+
+/**
+ * CONTENTS:
+ * 
+ * ##LABEL BASE
+ * ##LABEL PRIMARY
+ * 
+ */
+
+/* ##LABEL BASE
+   ========================================================================== */
+.label {
+  display: inline-flex;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  @apply bg-base-20 text-base-0;
+}
+
+/* ##LABEL PRIMARY
+   ========================================================================== */
+.label--primary {
+  @apply bg-primary-0 text-base-40;
+}

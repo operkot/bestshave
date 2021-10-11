@@ -1,0 +1,29 @@
+/* ==========================================================================
+   #SHOWCASE
+   ========================================================================== */
+
+/**
+ * Product showcase (image gallery)
+ */
+
+/* ##SHOWCASE BASE
+   ========================================================================== */
+.showcase {
+}
+
+/* ##SHOWCASE MAIN
+   ========================================================================== */
+.showcase-main {
+}
+
+/* ##SHOWCASE THUMBS
+   ========================================================================== */
+.showcase-thumbs .swiper-slide {
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.showcase-thumbs .swiper-slide-thumb-active {
+  @apply border-primary-0;
+}

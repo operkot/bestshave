@@ -1,0 +1,27 @@
+mixin comment-list
+  ol.reviews-list
+    li#li-comment-12
+      article.comment(id="comment-12")
+        .comment-info
+          .star-rating(role="img" aria-label="Оценка 5 из 5")
+            span(style="width:100%") Оценка #[strong.rating 5] из 5
+          p.comment-meta
+            strong.comment-author oper_kot
+            em.comment-verified.label.label--primary (проверенный владелец)
+            time.comment-published(datetime="2021-08-29T16:55:04+03:00") 29.08.2021
+
+        .comment-content
+          p Очень хороший бальзам, я очень доволен! :)))
+
+    li#li-comment-4
+      article.comment(id="comment-4")
+        .comment-info
+          .star-rating(role="img" aria-label="Оценка 4 из 5")
+            span(style="width:80%") Оценка #[strong.rating 4] из 5
+          p.comment-meta
+            strong.comment-author Константин
+            time.comment-published(datetime="2021-08-28T22:26:19+03:00") 28.08.2021
+
+        .comment-content
+          p Бальзам имеет приятный запах, но для моей кожи жирноват.
+      

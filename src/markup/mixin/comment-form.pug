@@ -1,0 +1,38 @@
+mixin comment-form
+  form.form.form--comment(action="#" method="post" id="commentform" class="" novalidate="")
+    p.form-notes Ваш адрес email не будет опубликован.
+
+    .form-rating
+      label.form-label(for="rating") Ваша оценка&nbsp; #[span.required *]
+      p.stars
+        span
+          a.star-1(href="#") 1
+          a.star-2(href="#") 2
+          a.star-3(href="#") 3
+          a.star-4(href="#") 4
+          a.star-5(href="#") 5
+        
+      select(name="rating" id="rating" required="" style="display: none;")
+        option(value="") Оценка…
+        option(value="5") Отлично
+        option(value="4") Хорошо
+        option(value="3") Средне
+        option(value="2") Неплохо
+        option(value="1") Очень плохо
+    
+    p.form-comment
+      label.form-label(for="comment") Ваш отзыв&nbsp; #[span.required *]
+      textarea.input(id="comment" name="comment" cols="45" rows="8" required="")
+    
+    p.form-author
+      label.form-label(for="author") Имя&nbsp;#[span.required *]
+      input.input(id="author" name="author" type="text" value="" size="30" required="")
+
+    p.form-email
+      label.form-label(for="email") Email&nbsp;#[span.required *]
+      input.input(id="email" name="email" type="email" value="" size="30" required="")
+    
+    p.form-submit
+      input.btn.btn--primary.w-full.py-3(name="submit" type="submit" id="submit" class="submit" value="Отправить")
+      input(type="hidden" name="comment_post_ID" value="222" id="comment_post_ID")
+      input(type="hidden" name="comment_parent" id="comment_parent" value="0")
