@@ -1,0 +1,95 @@
+/* ==========================================================================
+   #ORDERS
+   ========================================================================== */
+
+/**
+ * Orders tabs styles
+ */
+
+/* ##ORDERS BASE
+   ========================================================================== */
+.orders {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.orders:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+/* ##ORDERS HEAD
+   ========================================================================== */
+@media (width < theme('screens.xl')) {
+  .orders-head {
+    display: none;
+  }
+}
+
+@media (width >= theme('screens.xl')) {
+  .orders-head tr {
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-color: rgba(173, 173, 173, 0.5);
+  }
+
+  .orders-head th {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-weight: 600;
+  }
+}
+
+/* ##ORDERS BODY
+   ========================================================================== */
+.orders-body td {
+  padding: 0.75rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+@media (width >= theme('screens.xl')) {
+  .orders-body tr:nth-child(even) {
+    @apply bg-base-30;
+  }
+
+  .orders-body tr {
+    display: table-row;
+  }
+
+  .orders-body td {
+    display: table-cell;
+    text-align: center;
+  }
+}
+
+@media (width < theme('screens.xl')) {
+  .orders-body tr {
+    display: block;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-style: solid;
+
+    @apply border-base-0;
+  }
+
+  .orders-body tr:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  .orders-body td {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .orders-body td:before {
+    content: attr(data-title);
+
+    font-weight: 700;
+    margin-right: 0.25rem;
+  }
+
+  .orders-body td:nth-child(even) {
+    @apply bg-base-30;
+  }
+}

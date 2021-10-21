@@ -1,0 +1,84 @@
+extends layout/default
+
+include mixin/breadcrumbs
+include mixin/icon
+
+
+block vars
+  -
+    locals.page = {
+      language: 'ru',
+      name: 'catalog',
+      title: 'Мой аккаунт • Bestshave.ru',
+      description: 'Page description'
+    }
+
+block main
+  .site-content.wrapper.pt-6.pb-20(id="content")
+    +breadcrumbs({
+      items: ['Мой аккаунт'],
+      classname: 'mb-6'
+    })
+
+    main.site-main(id="main")
+      .dashboard
+        nav.dashboard-nav
+          ul
+            li.dashboard-navitem
+              a.dashboard-navlink(href="#") Панель управления
+            li.dashboard-navitem
+              a.dashboard-navlink.is-active(href="#") Заказы
+            li.dashboard-navitem
+              a.dashboard-navlink(href="#") Адрес
+            li.dashboard-navitem
+              a.dashboard-navlink(href="#") Детали профиля
+            li.dashboard-navitem
+              a.dashboard-navlink(href="#") Выйти
+        
+        .dashboard-content
+          .order
+            p.order-preview Заказ № #[mark.order-number 195] был оформлен #[mark.order-date 15.09.2021] и сейчас #[mark.order-status На удержании].
+
+            section.order-section.mb-8
+              h2.heading-block.mb-2 Информация о заказе
+
+              .receipt
+                table.receipt-table
+                  thead
+                    tr
+                      th.text-left Товар
+                      th.text-right Итого
+
+                  tbody
+                    tr
+                      td.text-left
+                        a.link.underline(href="#") Мыло для бритья Truefitt &amp; Hill Apsley Shaving Soap в деревянной чаше
+                        strong ×&nbsp;1
+                      td.text-right
+                        span
+                          bdi 3 000&nbsp;#[span ₽]
+
+                    tr
+                      td.text-left
+                        a.link.underline(href="#") Станок для бритья Muhle R 95 Rocca
+                        strong ×&nbsp;1
+                      td.text-right
+                        span
+                          bdi 6 900&nbsp;#[span ₽]
+
+                  tfoot
+                    tr
+                      th.text-left(scope="row") Подытог:
+                      td.text-right
+                        span 9 900&nbsp;#[span ₽]
+                    tr
+                      th.text-left(scope="row") Метод оплаты:
+                      td.text-right Прямой банковский перевод
+                    tr
+                      th.text-left(scope="row") Итого:
+                      td.text-right
+                        span 9 900&nbsp;#[span ₽]
+            
+            section.order-section
+              h2.heading-block.mb-4 Платёжный адрес
+              address Александр Спицин #[br] ая 12 ул.Краснознаменская 77/24 286709 #[br] с.Куйбышево #[br] Ростовская обл. #[br] 346940 #[p +380714503585] #[p aleks.spitsin@gmail.com]

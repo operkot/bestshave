@@ -1,0 +1,78 @@
+extends layout/default
+
+include mixin/breadcrumbs
+include mixin/icon
+include mixin/pager
+
+block vars
+  -
+    locals.page = {
+      language: 'ru',
+      name: 'catalog',
+      title: 'Мой аккаунт • Bestshave.ru',
+      description: 'Page description'
+    }
+
+block main
+  .site-content.wrapper.pt-6.pb-20(id="content")
+    +breadcrumbs({
+      items: ['Мой аккаунт'],
+      classname: 'mb-6'
+    })
+
+    main.site-main(id="main")
+      .dashboard
+        nav.dashboard-nav
+          ul
+            li.dashboard-navitem
+              a.dashboard-navlink(href="#") Панель управления
+            li.dashboard-navitem
+              a.dashboard-navlink.is-active(href="#") Заказы
+            li.dashboard-navitem
+              a.dashboard-navlink(href="#") Адрес
+            li.dashboard-navitem
+              a.dashboard-navlink(href="#") Детали профиля
+            li.dashboard-navitem
+              a.dashboard-navlink(href="#") Выйти
+        
+        .dashboard-content
+          table.orders.mb-8
+            thead.orders-head
+              tr
+                th: span.nobr Заказ
+                th: span.nobr Дата
+                th: span.nobr Статус
+                th: span.nobr Итого
+                th: span.nobr Действия
+            tbody.orders-body
+              tr
+                td(data-title="Заказ")
+                  a(href="#") №195
+                td(data-title="Дата")
+                  time(datetime="2021-09-15T16:09:27+00:00") 15.09.2021
+                td(data-title="Статус") На удержании
+                td(data-title="Итого")
+                  span 9 900&nbsp; #[span ₽] за 2 единицы
+                td(data-title="Действия")
+                  a.link.underline(href="") Просмотр
+              tr
+                td(data-title="Заказ")
+                  a(href="#") №195
+                td(data-title="Дата")
+                  time(datetime="2021-09-15T16:09:27+00:00") 15.09.2021
+                td(data-title="Статус") На удержании
+                td(data-title="Итого")
+                  span 9 900&nbsp; #[span ₽] за 2 единицы
+                td(data-title="Действия")
+                  a.link.underline(href="") Просмотр
+              tr
+                td(data-title="Заказ")
+                  a(href="#") №195
+                td(data-title="Дата")
+                  time(datetime="2021-09-15T16:09:27+00:00") 15.09.2021
+                td(data-title="Статус") На удержании
+                td(data-title="Итого")
+                  span 9 900&nbsp; #[span ₽] за 2 единицы
+                td(data-title="Действия")
+                  a.link.underline(href="") Просмотр
+          +pager

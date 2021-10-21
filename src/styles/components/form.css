@@ -17,6 +17,26 @@
   @apply text-primary-0;
 }
 
+/* ##FORM FIELDSET
+   ========================================================================== */
+.form-fieldset {
+  padding: 1rem 1.5rem 1.5rem;
+
+  @apply bg-base-30;
+}
+
+/* ##FORM LEGEND
+     ========================================================================== */
+.form-legend {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.form-legend:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
 /* ##FORM COMMENT
    ========================================================================== */
 .form--comment {

@@ -1,0 +1,107 @@
+/* ==========================================================================
+   #WPFORM
+   ========================================================================== */
+
+/**
+ * WooCOmmerce account edit form
+ */
+
+/* ##WPFORM BASE
+   ========================================================================== */
+.wpform {
+  display: grid;
+}
+
+@media (width < theme('screens.md')) {
+  .wpform {
+    grid-gap: 1rem;
+  }
+}
+
+@media (width >= theme('screens.md')) {
+  .wpform {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+  }
+}
+
+/* ##WPFORM WIDE ROW
+   ========================================================================== */
+.wpform .form-row-wide {
+  grid-column: 1 / -1;
+}
+
+/* ##WPFORM LABEL
+   ========================================================================== */
+.wpform label {
+  font-size: 0.875rem;
+}
+
+.wpform label em {
+  @apply text-primary-0;
+}
+
+/* ##WPFORM INPUT WRAPPER
+   ========================================================================== */
+.wpform .woocommerce-input-wrapper {
+  display: block;
+}
+
+/* ##WPFORM INPUT
+   ========================================================================== */
+.wpform input,
+.wpform textarea {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 140%;
+
+  background-color: #e3e3e3;
+}
+
+.wpform input:focus {
+  outline: none;
+}
+
+.wpform input::placeholder {
+  transition: opacity 0.3s ease;
+}
+
+.wpform input:focus::placeholder {
+  opacity: 0;
+}
+
+.wpform textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+
+/* ##WPFORM SELECT2
+   ========================================================================== */
+.wpform .select2-container--default .select2-selection--single {
+  border: 0;
+  background-color: #e3e3e3;
+  height: auto;
+}
+
+.wpform
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.wpform
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  top: 8px;
+  right: 8px;
+}
+
+.wpform .select2-container {
+  z-index: 9 !important;
+}

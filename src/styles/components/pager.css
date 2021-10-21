@@ -1,0 +1,37 @@
+/* ==========================================================================
+   #PAGER
+   ========================================================================== */
+
+/* ##PAGER BASE
+   ========================================================================== */
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ##PAGER LINK
+   ========================================================================== */
+/* prettier-ignore */
+.pager-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  height: 42px;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-width: 2px;
+  border-style: solid;
+  transition: 
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+
+  @apply border-base-0;
+}
+
+.pager-link:hover {
+  @apply bg-primary-0 border-primary-0 text-base-40;
+}

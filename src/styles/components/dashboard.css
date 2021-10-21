@@ -1,0 +1,53 @@
+/* ==========================================================================
+   #DASHBOARD
+   ========================================================================== */
+
+/* ##DASHBOARD BASE
+   ========================================================================== */
+.dashboard {
+  display: grid;
+  grid-gap: 3rem;
+}
+
+@media (width >= theme('screens.lg')) {
+  .dashboard {
+    grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+  }
+}
+
+/* ##DASHBOARD NAV
+   ========================================================================== */
+.dashboard-nav {
+}
+
+/* ##DASHBOARD NAVLINK
+   ========================================================================== */
+.dashboard-navlink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  @apply bg-base-30;
+}
+
+.dashboard-navlink:hover,
+.dashboard-nav li.is-active .dashboard-navlink {
+  @apply text-base-40 bg-base-10;
+}
+
+/* ##DASHBOARD CONTENT
+   ========================================================================== */
+/* .dashboard-content p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.dashboard-content p a {
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.dashboard-content p a:hover {
+  @apply text-primary-0;
+} */

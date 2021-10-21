@@ -1,0 +1,41 @@
+extends layout/default
+
+include mixin/breadcrumbs
+include mixin/icon
+
+
+block vars
+  -
+    locals.page = {
+      language: 'ru',
+      name: 'catalog',
+      title: 'Мой аккаунт • Bestshave.ru',
+      description: 'Page description'
+    }
+
+block main
+  .site-content.wrapper.pt-6.pb-20(id="content")
+    +breadcrumbs({
+      items: ['Мой аккаунт'],
+      classname: 'mb-6'
+    })
+
+    main.site-main(id="main")
+      .dashboard
+        nav.dashboard-nav
+          ul
+            li.dashboard-navitem
+              a.dashboard-navlink.is-active(href="#") Панель управления
+            li.dashboard-navitem
+              a.dashboard-navlink(href="#") Заказы
+            li.dashboard-navitem
+              a.dashboard-navlink(href="#") Адрес
+            li.dashboard-navitem
+              a.dashboard-navlink(href="#") Детали профиля
+            li.dashboard-navitem
+              a.dashboard-navlink(href="#") Выйти
+        
+        .dashboard-content
+          p.mb-4 Добро пожаловать, #[strong admin] (не #[strong admin]? #[a(href="#") Выйти])
+
+          p Из главной страницы аккаунта вы можете посмотреть ваши #[a(href="#") недавние заказы], настроить #[a(href="#") платежный адрес и адрес доставки], а также #[a(href="#") изменить пароль и основную информацию].

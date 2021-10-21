@@ -60,6 +60,11 @@
 @import 'components/comment.css';
 @import 'components/checkbox.css';
 @import 'components/toast.css';
+@import 'components/dashboard.css';
+@import 'components/orders.css';
+@import 'components/order.css';
+@import 'components/receipt.css';
+@import 'components/pager.css';
 
 /* ##PLUGINS
    ========================================================================== */
@@ -67,6 +72,7 @@
 @import 'plugins/brands.css';
 @import 'plugins/filter.css';
 @import 'plugins/starrating.css';
+@import 'plugins/wpform.css';
 /* purgecss end ignore */
 
 /* ##STATE

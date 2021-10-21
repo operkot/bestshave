@@ -92,7 +92,7 @@
    ========================================================================== */
 .hero-title {
   line-height: 120%;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .hero-title:not(:last-child) {
@@ -107,7 +107,7 @@
 
 @media (width >= theme('screens.md')) {
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.75rem;
   }
 }
 

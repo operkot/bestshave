@@ -1,0 +1,36 @@
+/* ==========================================================================
+   #ORDER
+   ========================================================================== */
+
+/**
+ * Order view styles
+ */
+
+/* ##ORDER BASE
+   ========================================================================== */
+.order {
+}
+
+/* ##ORDER PREVIEW
+   ========================================================================== */
+.order-preview mark {
+  font-weight: 700;
+  background-color: transparent;
+}
+
+.order-preview:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+/* ##ORDER CUSTOMER
+   ========================================================================== */
+.order-customer {
+  display: grid;
+  grid-gap: 1.5rem;
+}
+
+@media (width >= theme('screens.md')) {
+  .order-customer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

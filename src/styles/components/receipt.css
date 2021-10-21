@@ -1,0 +1,70 @@
+/* ==========================================================================
+   #RECEIPT
+   ========================================================================== */
+
+/* ##RECEIPT BASE
+   ========================================================================== */
+.receipt {
+  position: relative;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.receipt:before,
+.receipt:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background-size: 0 100%, 16px 16px, 16px 16px;
+}
+
+.receipt:before,
+.receipt:after {
+  background-image: -webkit-linear-gradient(transparent 0, transparent 0),
+    -webkit-linear-gradient(135deg, #f8f8f8 33.33%, transparent 33.33%),
+    -webkit-linear-gradient(45deg, #f8f8f8 33.33%, transparent 33.33%);
+}
+
+.receipt:before {
+  top: 0;
+}
+
+.receipt:after {
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+/* ##RECEIPT TABLE
+   ========================================================================== */
+.receipt-table {
+  width: 100%;
+  background-color: #f8f8f8;
+}
+
+@media (width >= theme('screens.md')) {
+  .receipt-table {
+    table-layout: fixed;
+  }
+}
+
+@media (width < theme('screens.md')) {
+  .receipt-table td,
+  .receipt-table th {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (width >= theme('screens.md')) {
+  .receipt-table td,
+  .receipt-table th {
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+.receipt-table tfoot {
+  border-top: 1px dashed #aeaeae;
+}
