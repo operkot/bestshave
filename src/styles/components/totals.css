@@ -1,0 +1,56 @@
+/* ==========================================================================
+   #TOTALS
+   ========================================================================== */
+
+/**
+ * Cart totals table
+ */
+
+/* ##TOTALS BASE
+   ========================================================================== */
+.totals {
+  background-color: #f8f8f8;
+}
+
+.totals th,
+.totals td {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (width < theme('screens.xs')) {
+  .totals th,
+  .totals td {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (width >= theme('screens.xs')) {
+  .totals {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .totals th,
+  .totals td {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
+.totals th {
+  text-align: left;
+}
+
+@media (width < theme('screens.xs')) {
+  .totals th {
+    font-size: 0.875rem;
+  }
+}
+
+@media (width >= theme('screens.xs')) {
+  .totals th {
+    width: 140px;
+  }
+}

@@ -1,0 +1,38 @@
+/* ==========================================================================
+   ##COUPON
+   ========================================================================== */
+
+/* ##COUPON BASE
+   ========================================================================== */
+.coupon {
+  display: grid;
+}
+
+@media (width < theme('screens.md')) {
+  .coupon {
+    grid-gap: 1rem;
+  }
+}
+
+@media (width >= theme('screens.md')) {
+  .coupon {
+    grid-gap: 1.5rem;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+  }
+}
+
+/* ##COUPON INPUT
+   ========================================================================== */
+@media (width >= theme('screens.md')) {
+  .coupon-input {
+    margin-right: 1.5rem;
+  }
+}
+
+/* ##COUPON ACTION
+   ========================================================================== */
+.coupon-action {
+  width: 100%;
+  flex-shrink: 0;
+}

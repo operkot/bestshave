@@ -1,33 +1,32 @@
 /* ==========================================================================
-   #LOGO
+   ##SHIPPING
    ========================================================================== */
 
-/* ##LOGO BASE
+/* ##SHIPPING BASE
    ========================================================================== */
-.logo {
+.shipping {
+  font-size: 0.875rem;
+}
+
+/* ##SHIPPING LIST
+   ========================================================================== */
+.shipping-list:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+/* ##SHIPPING METHOD
+   ========================================================================== */
+.shipping-method {
   display: flex;
-  flex-direction: column;
   align-items: center;
   line-height: 1;
-  letter-spacing: 0.02em;
-
-  transition: color 0.3s ease;
 }
 
-/* ##LOGO TITLE
-   ========================================================================== */
-.logo-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.logo-title:not(:last-child) {
+.shipping-method:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
-/* ##LOGO SUBTITLE
+/* ##SHIPPING DESTINATION
    ========================================================================== */
-.logo-subtitle {
-  font-size: 0.75rem;
+.shipping-destination {
 }

@@ -1,0 +1,45 @@
+/* ==========================================================================
+   #RADIO
+   ========================================================================== */
+
+/* ##RADIO BASE
+   ========================================================================== */
+.radio {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  position: relative;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+
+  border-width: 1px;
+  border-style: solid;
+  transition: border-color 0.3s ease;
+
+  @apply rounded-full border-base-20;
+}
+
+.radio:checked {
+  @apply border-primary-0;
+}
+
+.radio:before {
+  content: '';
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  @apply rounded-full bg-primary-0;
+}
+
+.radio:checked:before {
+  opacity: 1;
+}

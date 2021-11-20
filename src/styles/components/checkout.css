@@ -1,0 +1,30 @@
+/* ==========================================================================
+   #CHECKOUT
+   ========================================================================== */
+
+/* ##CHECKOUT BASE
+   ========================================================================== */
+.checkout {
+  display: grid;
+  grid-gap: 2rem;
+}
+
+@media (width >= theme('screens.xl')) {
+  .checkout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ##CHECKOUT SECTION
+   ========================================================================== */
+.checkout-section:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+/* ##CHECKOUT FOOTER
+   ========================================================================== */
+.checkout-footer {
+  padding: 1.5rem;
+
+  @apply bg-base-30;
+}

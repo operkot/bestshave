@@ -1,0 +1,105 @@
+extends layout/default
+
+include mixin/icon
+include mixin/breadcrumbs
+
+block vars
+  -
+    locals.page = {
+      language: 'ru',
+      name: 'brands',
+      title: 'Корзина • Bestshave.ru',
+      description: 'Page description'
+    }
+
+
+block main
+  
+  #content.site-content.wrapper.pt-6.pb-20
+    +breadcrumbs({ items: ['Корзина'], classname: 'mb-6' })
+
+    main#main.site-main
+      header.entry-header.mb-10
+        h1.entry-title.heading-page Корзина
+
+      form.woocommerce-cart-form(action="#" method="post")
+        table.cart-table(cellspacing="0")
+          thead
+            tr
+              th &nbsp;
+              th Товар
+              th Цена
+              th Количество
+              th Подытог
+              th &nbsp;
+          
+          tbody
+            tr
+              td
+                a.cart-thumb(href="#")
+                  img(width="200" height="200" src="img/uploads/muhle-r-41-traditional.png" alt="")
+
+              td.cart-row(data-title="Товар:")
+                a.link.underline(href="#") Станок для бритья Mühle R41 Traditional Razor
+
+              td.cart-row(data-title="Цена:")
+                span.cart-amount
+                  bdi 2 600&nbsp;#[span.woocommerce-Price-currencySymbol ₽]
+
+              td.cart-row(data-title="Количество:")
+                .quantity
+                  //- label.screen-reader-text(for="quantity_6171d30f140d4") Количество Мыло для бритья Stirling Barbershop
+                  input.quantity-input.input(type="number" step="1" min="0" max="" name="cart[bcbe3365e6ac95ea2c0343a2395834dd][qty]" value="1" title="Кол-во" size="4" placeholder="" inputmode="numeric")
+
+              td.cart-row(data-title="Подытог:")
+                span.cart-amount
+                  bdi 2 600&nbsp;#[span.woocommerce-Price-currencySymbol ₽]
+              
+              td.cart-remove
+                a(href="#" class="remove" aria-label="Удалить эту позицию")
+                  +icon({ name: 'times-circle', size: { w: 24, h: 24 } })
+        
+        .cart-actions(colspan="6")
+          .cart-coupon.coupon
+            //- label(for="coupon_code") Купон:
+            input.coupon-input.input(type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="Код купона")
+            button.coupon-action.btn.btn--secondary.py-4(type="submit" class="button" name="apply_coupon" value="Применить купон") Применить купон
+          
+          button.cart-refresh.btn.btn--primary.py-4(type="submit" class="button" name="update_cart" value="Обновить корзину" disabled="" aria-disabled="true") Обновить корзину
+
+        .cart-collaterals
+          .cart-totals
+            h2.heading-block.mb-2 Сумма заказов
+            .receipt.mb-6
+              table.totals(cellspacing="0")
+                tbody
+                  tr
+                    th Подытог:
+                    td(data-title="Подытог")
+                      span.cart-amount
+                        bdi 6 600&nbsp;#[span ₽]
+
+                  tr
+                    th Доставка:
+                    td.shipping(data-title="Доставка")
+                      ul.shipping-list(id="shipping_method")
+                        li.shipping-method
+                          input.radio.mr-2(type="radio" name="shipping_method[0]" data-index="0" id="shipping_method_0_local_pickup1" value="local_pickup:1" class="shipping_method" checked="checked")
+                          label(for="shipping_method_0_local_pickup1") Самовывоз
+                        li.shipping-method
+                          input.radio.mr-2(type="radio" name="shipping_method[0]" data-index="0" id="shipping_method_0_flat_rate2" value="flat_rate:2" class="shipping_method")
+                          label(for="shipping_method_0_flat_rate2") Почта России
+                        li.shipping-method
+                          input.radio.mr-2(type="radio" name="shipping_method[0]" data-index="0" id="shipping_method_0_flat_rate4" value="flat_rate:4" class="shipping_method")
+                          label(for="shipping_method_0_flat_rate4") СДЭК
+                      p.shipping-destination Доставка в #[strong Ростовская обл.].
+
+                  tr.order-total
+                    th Итого:
+                    td(data-title="Итого")
+                      strong
+                        span.cart-amount
+                          bdi 6 600&nbsp;#[span ₽]
+
+            .wc-proceed-to-checkout
+              a.checkout-button.button.alt.wc-forward.btn.btn--primary.py-4.w-full(href="#") Оформить заказ

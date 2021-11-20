@@ -65,6 +65,15 @@
 @import 'components/order.css';
 @import 'components/receipt.css';
 @import 'components/pager.css';
+@import 'components/cart.css';
+@import 'components/quantity.css';
+@import 'components/coupon.css';
+@import 'components/totals.css';
+@import 'components/radio.css';
+@import 'components/shipping.css';
+@import 'components/checkout.css';
+@import 'components/payment.css';
+@import 'components/discount.css';
 
 /* ##PLUGINS
    ========================================================================== */

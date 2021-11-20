@@ -1,0 +1,72 @@
+/* ==========================================================================
+   #PAYMENT
+   ========================================================================== */
+
+/* ##PAYMENT BASE
+   ========================================================================== */
+.payment {
+}
+
+/* ##PAYMENT METHOD
+   ========================================================================== */
+.payment-method {
+}
+
+/* ##PAYMENT LABEL
+   ========================================================================== */
+.payment-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem;
+  text-align: left;
+  background-color: #e3e3e3;
+}
+
+/* ##PAYMENT RADIO
+   ========================================================================== */
+.payment-radio {
+  position: relative;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+
+  @apply rounded-full bg-base-40;
+}
+
+.payment-radio:first-child:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.payment-radio:last-child:not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.payment-radio:before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  opacity: 0;
+  border-style: solid;
+  border-width: 5px;
+  transition: opacity 0.3s ease;
+
+  @apply rounded-full border-primary-0 bg-base-40;
+}
+
+.payment-radio:checked:before {
+  opacity: 1;
+}
+
+/* ##PAYMENT CONTENT
+   ========================================================================== */
+.payment-content {
+  padding: 1.25rem;
+
+  @apply bg-base-30;
+}
